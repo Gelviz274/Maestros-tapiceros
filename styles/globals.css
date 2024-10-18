@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /*VARIABLES PAG ANTIGUA*/
+  --beige: #f3d7c6;
+  --cafe: #4e3e35;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--cafe);
+  background: var(--beige);
+  font-family: 'Montserrat', sans-serif;
+}
+
