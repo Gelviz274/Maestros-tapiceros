@@ -13,7 +13,7 @@ export const title = tv({
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
       beige: "from-[#f3d7c6] to-[#4e3e35]",
       cafe: "from-[#4e3e35] to-[#f3d7c6]",
-      cafe_hover: "#a69369",
+      cafehover: "#a69369",
     },
     size: {
       sm: "text-3xl lg:text-4xl",
@@ -39,7 +39,7 @@ export const title = tv({
         "foreground",
         "beige",
         "cafe",
-        "cafe_hover"
+        "cafehover"
       ],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },

@@ -9,7 +9,7 @@ export default function Parallax({ children }: { children: ReactNode }) {
     const { scrollYProgress } = useScroll({ target });
 
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-    const scale2 = useTransform(scrollYProgress, [0, 1], [0.99, 1]);
+    const scale2 = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
 

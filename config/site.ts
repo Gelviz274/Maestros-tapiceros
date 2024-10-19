@@ -17,10 +17,6 @@ export const siteConfig = {
       href: "/servicios",
     },
     {
-      label: "Trabajos",
-      href: "/trabajos",
-    },
-    {
       label: "Contacto",
       href: "/contacto",
     },
@@ -37,10 +33,6 @@ export const siteConfig = {
     {
       label: "Servicios",
       href: "/servicios",
-    },
-    {
-      label: "Trabajos",
-      href: "/trabajos",
     },
     {
       label: "Contacto",

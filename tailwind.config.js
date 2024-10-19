@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         cafe: "#4e3e35",
         beige: "#f3d7c6",
+        cafehover: "#695b53",
+        beigehover: "#e6ac8b",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
