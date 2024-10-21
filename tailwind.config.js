@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         cafe: "#4e3e35",
+        cafeclaro: "#685340",
         beige: "#f3d7c6",
         cafehover: "#695b53",
         beigehover: "#e6ac8b",
@@ -21,6 +22,12 @@ module.exports = {
       },
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

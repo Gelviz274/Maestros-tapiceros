@@ -7,7 +7,13 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
+
+// FUENTES //
 import { montserrat } from "@/config/fonts";
+import { garamont } from "@/config/fonts";
+import { comfortaa } from "@/config/fonts";
+import {ebGaramond} from "@/config/fonts";
+
 import  Header  from "@/components/navbar";
 
 export const metadata: Metadata = {
@@ -38,7 +44,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "max-screen bg-beige montserrat antialiased",
-          montserrat,
+          comfortaa.className,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
