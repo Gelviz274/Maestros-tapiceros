@@ -1,10 +1,15 @@
 "use client"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { NavbarMenuToggle, NavbarMenuItem, NavbarMenu } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
-import { MuebleIcon, DoorIcon, ChevronDown, BarcoIcon, CarIcon, AvionIcon } from "@/components/icons";
+import React from "react";
+import { MuebleIcon, DoorIcon, ChevronDown, BarcoIcon, CarIcon, AvionIcon, TelephoneIcon } from "@/components/icons";
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+
   // ELEMENTOS PARA EL MENU DE NAVEGACIÓN EN CELULARES // 
   const menuItems = [
     "Inicio",
@@ -15,12 +20,13 @@ export default function App() {
 
 
   return (
-    <div className="W-full">
+    <div className="W-full z-50">
       <div className="bg-beige flex justify-around items-center text-cafe h-10 font-bold ">
-        <h3>
+        <h3>Llamanos al:
           <Link href="tel:641388422"
-          className="hover:text-cafehover text-cafe">
+            className="hover:text-cafehover text-cafe ml-1 items-center">
             641 388 422
+            <TelephoneIcon />
           </Link>
         </h3>
         <h3>
@@ -30,7 +36,14 @@ export default function App() {
           </Link>
         </h3>
       </div>
-      <Navbar shouldHideOnScroll className="bg-white flex min-h-36 w-full justify-around items-center" >
+      <Navbar
+        shouldHideOnScroll
+        className="bg-white flex min-h-36 w-full justify-around items-center"
+        isBordered
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+      >
+
         <div className="flex justify-evenly items-center w-full">
           <NavbarBrand>
             <Link href="/">
@@ -157,6 +170,26 @@ export default function App() {
             </NavbarItem>
           </NavbarContent>
         </div>
+        <NavbarContent className="sm:hidden" justify="start">
+          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+        </NavbarContent>
+
+
+
+
+        <NavbarMenu className=" gap-2 mt-28">
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                className="w-full justify-end text-cafe font-bold text-large"
+                href="#"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </Navbar>
     </div>
 
