@@ -44,7 +44,7 @@ export default function App() {
         onMenuOpenChange={setIsMenuOpen}
       >
 
-        <div className="flex justify-evenly items-center w-full">
+        <div className="flex justify-evenly items-center gap-10 w-full">
           <NavbarBrand>
             <Link href="/">
               <Image
@@ -58,7 +58,7 @@ export default function App() {
             </Link>
           </NavbarBrand>
 
-          <NavbarContent className="hidden sm:flex gap-6 font-bold text-cafe" >
+          <NavbarContent className="hidden sm:flex gap-10 font-bold text-cafe" >
             <NavbarItem>
               <Link className="font-bold text-cafe hover:text-cafe_hover text-large" href="/">
                 Inicio
