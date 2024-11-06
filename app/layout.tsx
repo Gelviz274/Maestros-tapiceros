@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
+import Footer  from "@/components/Footer";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -13,6 +13,7 @@ import { montserrat } from "@/config/fonts";
 import { garamont } from "@/config/fonts";
 import { comfortaa } from "@/config/fonts";
 import {ebGaramond} from "@/config/fonts";
+import {RobotoFont} from "@/config/fonts";
 
 import  Header  from "@/components/navbar";
 
@@ -43,17 +44,19 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "max-screen bg-beige montserrat antialiased",
-          comfortaa.className,
+          "max-screen bg-white montserrat antialiased",
+          RobotoFont.className,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Header />
-            <main className="container mx-auto max-w-full flex-grow bg-beige">
+            <main className="container mx-auto max-w-full flex-grow bg-w">
               {children}
             </main>
+            <Footer />
           </div>
+
         </Providers>
       </body>
     </html>

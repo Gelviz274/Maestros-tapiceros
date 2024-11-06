@@ -2,6 +2,19 @@ import { Montserrat } from 'next/font/google';
 import { Cormorant_Garamond } from 'next/font/google';
 import { Comfortaa } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
+import { Merriweather } from 'next/font/google';
+import { Roboto } from 'next/font/google';
+
+
+export const RobotoFont = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], 
+})
+
+export const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 
 export const ebGaramond = EB_Garamond({

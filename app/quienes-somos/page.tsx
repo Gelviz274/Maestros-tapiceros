@@ -2,7 +2,9 @@ import React from 'react'
 
 function Quienessomos() {
   return (
-    <div>Quienessomos</div>
+    <div>
+      <h1 className='text-xl font-bold'>TATISSS</h1>
+    </div>
   )
 }
 

@@ -5,14 +5,28 @@ import '../styles/globals.css';
 import Parallax from '@/components/parallax';
 import { motion } from 'framer-motion';
 import CardComponent from '@/components/cards';
+import Servicesin from '@/components/serviciosin';
 
+import { ShieldIcon, ClockIcon, StarIcon } from '@/components/icons';
 
+import { FunctionComponent, SVGProps } from 'react';
 
+type Seccion1 = {
+    id: number;
+    icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+    title: string;
+    text: string;
+}
+const seccion1: Seccion1[] = [
+    { id: 1, icon: ShieldIcon, title: "Calidad Asegurada", text: "Respaldamos nuestro trabajo con una garantía líder en la industria y materiales premium." },
+    { id: 2, icon: ClockIcon, title: "Más de 25 años de experiencia", text: "Decadas de experiencia en restauracion de muebles y artesania y tapiceria" },
+    { id: 3, icon: StarIcon, title: "Soluciones personalizadas", text: "Servicios de tapiceria adaptados a su estilo y requisitos únicos." }
+]
 
 function Homepage() {
     return (
 
-        <article className='h-full -mt-20 bg-no-repeat'
+        <article className='h-full -mt-16 bg-no-repeat'
             style={{ backgroundImage: 'url("fondo.jpg")' }}>
             { /*PANTALLA PRINCIPAL*/}
             <Parallax>
@@ -22,15 +36,17 @@ function Homepage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
-                        className="text-5xl text-center grid place-items-center font-bold text-[#f6f4f0] gap-5">
+                        className="text-6xl text-center grid place-items-center font-bold text-[#f6f4f0] gap-5 w-4/5">
 
                         Maestros Tapiceros, tapicería y restauración de muebles en Madrid
                         <strong className="text-balance text-2xl font-normal w-4/5">
                             Ofrecemos servicios de tapicería y fabricación de muebles de alta calidad para renovar y embellecer sus espacios.
                         </strong>
                         <motion.button
+                            whileTap={{ scale: 0.9 }}
+
                             whileHover={{ scale: 1.1 }}
-                            className="bg-beige hover:bg-[#f6f4f0] text-cafe hover:text-[#514134] font-semibold py-2 px-4 border border-[#f6f4f0] hover:border-transparent rounded-full text-3xl">
+                            className="bg-[#202020]  text-white hover:text-[#d9d9d9] font-semibold py-4 px-8  rounded text-2xl">
                             Contactanos
                         </motion.button>
                     </motion.h2>
@@ -40,76 +56,99 @@ function Homepage() {
 
 
                 { /*SECCION 1 - CONTENT 1 */}
-                <section className='h-auto rounded-xl bg-[#fff] flex flex-col px-44 py-12'>
-                    <div className='w-full max-h-[600px] flex p-2 items-start justify-evenly text-clip'>
-                        <div className="w-1/2 h-full flex flex-col mr-4">
-                            <h4 className='text-3xl text-start text-beigehover font-bold w-full max-h-16 mt-5 text-wrap'>
-                                Servicios de Tapiceria
-                                <br />
-                                <p className="text-base text-start w-full text-cafe mb-10 text-wrap font-extralight">
-                                    Somos <strong className='font-bold text-beigehover'>expertos</strong> en la tapicería de todo tipo de muebles, desde <strong className='font-bold text-beigehover'>sofás</strong> hasta <strong className='font-bold text-beigehover'>sillas de aviación</strong> y <strong className='font-bold text-beigehover'>barcos</strong>.
-                                    Nuestro equipo está <strong className='font-bold text-beigehover'>altamente capacitado</strong> para <strong className='font-bold text-beigehover'>restaurar</strong> y <strong className='font-bold text-beigehover'>reparar</strong> tapicerías de cualquier tipo, incluyendo <strong className='font-bold text-beigehover'>paredes</strong>, <strong className='font-bold text-beigehover'>puertas</strong> y <strong className='font-bold text-beigehover'>cabeceros</strong>.
-                                    Cada proyecto representa una <strong className='font-bold text-beigehover'>oportunidad única</strong> para <strong className='font-bold text-beigehover'>transformar</strong> un mueble antiguo en una pieza renovada, incluso <strong className='font-bold text-beigehover'>mejor que nueva</strong>.
-                                </p>
+                <section className='h-auto rounded-sm bg-[#fff] flex flex-col px-32 py-12 items-center justify-start'>
+                    <motion.h2
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-6xl text-center grid place-items-center font-bold text-cafe gap-5 w-4/5">
+                        ¿Por qué elegirnos?
+                    </motion.h2>
+                    <motion.h3
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-2xl text-center grid place-items-center text-cafe gap-5 w-4/5 mt-5">
 
-                                Diseños Artesanales
-                                <br />
-                                <p className="text-base text-start w-full text-cafe text-wrap font-extralight">
-                                    Nuestros <strong className='font-bold text-beigehover'>diseños</strong> artesanales están pensados para <strong className='font-bold text-beigehover'>alegrar</strong> su <strong className='font-bold text-beigehover'>día a día</strong>.
-                                    La <strong className='font-bold text-beigehover'>atención al detalle</strong> y el <strong className='font-bold text-beigehover'>amor por lo hecho a mano</strong> se reflejan en cada uno de nuestros trabajos.
-                                    Con nosotros, puede estar seguro de que sus muebles recibirán un <strong className='font-bold text-beigehover'>trato exclusivo</strong> y <strong className='font-bold text-beigehover'>personalizado</strong>.
-                                </p>
+                        Tu visión, nuestra misión: creamos tapicería que refleja tu estilo único.
+                    </motion.h3>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex  items-center py-5 justify-evenly mt-10 gap-7  w-full h-auto">
 
-                            </h4>
+                        {seccion1.map((seccion) => (
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
+
+                                className='flex flex-col items-center justify-center gap-5 text-center py-2 bg-beigecard rounded-2xl w-96 h-72'
+                                key={seccion.id}>
+                                <seccion.icon />
+                                <h2 className='text-2xl font-bold text-cafe w-11/12'>{seccion.title}</h2>
+                                <p className='text-cafeclaro w-3/4'>{seccion.text}</p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                    <motion.div
+                        className="flex items-center justify-center gap-5 text-center p-5 mt-16 bg-beigecard rounded-2xl w-11/12 h-[450px]">
+                        <div className='w-2/4 p-4 flex flex-col items-start justify-start h-full'>
+                            <h2 className='text-4xl font-bold text-cafe py-5 px-2 text-start'>Nuestra Historia</h2 >
+                            <p className='text-cafeclaro text-start text-2xl py-3 px-2'><strong>Maestros Tapiceros en Madrid</strong>, un oficio que comenzó como parte de nuestra tradición familiar. <strong>Con más de 25 años de experiencia</strong>,
+                                hemos perfeccionado el arte de la tapicería, eligiendo <strong>los mejores materiales y técnicas de tapizado</strong> para lograr resultados de máxima calidad.
+                                En Maestros Tapiceros, transformamos y renovamos cada mueble, llenándolo de <strong>color y confort</strong>, y cuidando cada detalle para ofrecer un <strong>tapizado perfecto.</strong></p>
                         </div>
-
-                        <div className="flex w-2/4 h-[450px] items-center justify-center">
-                            <img src="/Sillaa.png" alt="Logo Maestros Tapiceros"
-                                className='w-full h-full'
-                                style={{ objectFit: 'cover' }} />
+                        <div className='w-2/4 h-auto p-5'>
+                            <img
+                                src="Sala.webp"
+                                alt="historia"
+                                className='w-full h-full object-cover rounded-xl' />
                         </div>
-                    </div>
-                    <br />
-                    { /*SECCION 1 - CONTENT 2 */}
-                    <div className='w-full h-auto flex p-2 items-start justify-evenly mt-3'>
-                        <div className="flex w-1/2 h-[450px] items-center justify-center">
-                            <img src="/Sofacuero.jpg" alt="Logo Maestros Tapiceros"
-                                className='w-full h-full'
-                                style={{ objectFit: 'cover' }} />
-                        </div>
-                        <div className="w-1/2 h-auto text-cafe ml-5">
-                            <h4 className='text-3xl text-start text-beigehover font-bold w-full h-auto mt-5 mb-6'>
-                                Fabricación y Restauración de Muebles
-                            </h4>
-                            <p className='text-base text-start w-full text-cafe text-wrap font-extralight mb-3'>
-                                En Maestros Tapiceros, nos enorgullece ofrecer una exquisita selección de muebles antiguos, perfectos para embellecer cualquier habitación de su hogar. Nuestro compromiso con la calidad se refleja en nuestro meticuloso proceso de fabricación y restauración, que incluye:
-                            </p>
-                            <ul className='gap-7 text-base font-extralight list-disc'>
-                                <li className='ml-6 mb-3'>
-                                    <strong className='font-bold text-beigehover'>Asesoramiento Especializado: </strong>
-                                    Nuestro equipo de expertos está listo para guiarle en la elección del tejido y estilo ideales para sus muebles, asegurando que cada pieza sea única y se ajuste a su visión.
-                                </li>
-                                <li className='ml-6 mb-3'>
-                                    <strong className='font-bold text-beigehover'>Reparación de Muebles: </strong>
-                                    Transformamos sus muebles viejos en obras maestras renovadas, combinando durabilidad y estética, para que pueda disfrutarlos por muchos años más.
-                                </li>
-                                <li className='ml-6'>
-                                    <strong className='font-bold text-beigehover'>Fabricación de Muebles a Medida: </strong>
-                                    Creamos muebles únicos, diseñados específicamente para satisfacer sus necesidades y gustos, garantizando que cada pieza sea tan especial como usted.
-                                </li>
-                            </ul>
+                    </motion.div>
 
 
-                        </div>
 
-                    </div>
                 </section>
 
             </Parallax>
+            <section className="bg-white p-10 w-full h-auto flex flex-col items-center justify-start px-44">
+                <motion.h2
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-6xl text-center grid place-items-center font-bold text-cafe gap-5 w-4/5">
+                    Servicios Especializados
+                </motion.h2>
+                <motion.h3
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-2xl text-center grid place-items-center text-cafe gap-5 w-4/5 mt-5">
+
+                    Ofrecemos servicios de tapicería en general, adaptándonos a cualquier necesidad específica que pueda tener.
+                </motion.h3>
+                <Servicesin />
+
+            </section>
             { /*SECCION 2 - CARDS */}
-            <section className="bg-beige p-10 w-full h-screen flex flex-col items-center justify-start px-44">
-                <h1 className="text-center text-cafe font-bold text-4xl mb-8">Nuestros Servicios</h1>
-                <p className='text-center text-cafe font-bold text-2xl'>Descubre nuestra amplia gama de servicios de tapicería diseñados para renovar y embellecer tus espacios. Desde sofás hasta oficinas, nuestro equipo de expertos está listo para transformar tus muebles y ambientes.</p>
+            <section className="bg-beigecard p-10 w-full h-auto flex flex-col items-center justify-start px-44">
+                <motion.h2
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-6xl text-center grid place-items-center font-bold text-cafe gap-5 w-4/5 mt-10">
+                    Transformaciones que Hablan por Sí Mismas
+                </motion.h2>
+                <motion.h3
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-2xl text-center grid place-items-center text-cafe gap-5 w-4/5 mt-5 mb-10">
+
+                    Inspiración para tu próximo proyecto: observa cómo convertimos tus ideas en realidad.
+                </motion.h3>
                 <CardComponent />
             </section>
         </article>

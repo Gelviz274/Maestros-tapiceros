@@ -4,7 +4,16 @@ import { NavbarMenuToggle, NavbarMenuItem, NavbarMenu } from "@nextui-org/react"
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import React from "react";
-import { MuebleIcon, DoorIcon, ChevronDown, BarcoIcon, CarIcon, AvionIcon, TelephoneIcon } from "@/components/icons";
+import {
+  MuebleIcon,
+  DoorIcon,
+  ChevronDown,
+  BarcoIcon,
+  CarIcon,
+  AvionIcon,
+  TelephoneIcon,
+  Mail
+} from "@/components/icons";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -12,16 +21,17 @@ export default function App() {
 
   // ELEMENTOS PARA EL MENU DE NAVEGACIÓN EN CELULARES // 
   const menuItems = [
-    "Inicio",
-    "Servicios",
-    "Sobre nosotros",
-    "Contacto",
+    { name: "Inicio", href: "/" }, // Página principal
+    { name: "Sobre Nosotros", href: "/quienes-somos" }, // Página sobre nosotros
+    { name: "Servicios", href: "/servicios" }, // Página de servicios
+    { name: "Contacto", href: "/contacto" }, // Página de contacto
   ];
+
 
 
   return (
     <div className="W-full z-50">
-      <div className="bg-beige flex justify-around items-center text-cafe h-10 font-bold ">
+      <div className="bg-beigecard flex justify-around items-center text-cafe h-10 font-bold ">
         <h3>Llamanos al:
           <Link href="tel:641388422"
             className="hover:text-cafehover text-cafe ml-1 items-center">
@@ -33,6 +43,8 @@ export default function App() {
           <Link href="mailto:info@maestrostapiceros.com"
             className="hover:text-cafehover text-cafe">
             info@maestrostapiceros.com
+            <Mail
+            className="ml-1"/>
           </Link>
         </h3>
       </div>
@@ -42,6 +54,7 @@ export default function App() {
         isBordered
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
+        isBlurred={false}
       >
 
         <div className="flex justify-evenly items-center gap-10 w-full">
@@ -49,16 +62,18 @@ export default function App() {
             <Link href="/">
               <Image
                 src="/Logo-HD.jpeg"
-                width={150}
-                height={150}
-                className="cursor-pointer"
+                width={200}
+                height={200}
+                className="cursor-pointer w-36 h-auto"
                 loading="eager"
                 alt="Logo Maestros Tapiceros"
+                priority
+
               />
             </Link>
           </NavbarBrand>
 
-          <NavbarContent className="hidden sm:flex gap-10 font-bold text-cafe" >
+          <NavbarContent className="hidden lg:flex gap-10 font-bold text-cafe">
             <NavbarItem>
               <Link className="font-bold text-cafe hover:text-cafe_hover text-large" href="/">
                 Inicio
@@ -170,22 +185,32 @@ export default function App() {
             </NavbarItem>
           </NavbarContent>
         </div>
-        <NavbarContent className="sm:hidden" justify="start">
-          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+        <NavbarContent className="lg:hidden" justify="start">
+          <NavbarMenuToggle aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"} />
         </NavbarContent>
 
 
 
 
-        <NavbarMenu className=" gap-2 mt-28">
+        <NavbarMenu className={`gap-25 mt-28 p-8 bg-beige ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`${item}-${index}`} className="bg-blue">
               <Link
-                className="w-full justify-end text-cafe font-bold text-large"
-                href="#"
-                size="lg"
+                className="
+                w-full 
+                flex 
+                gap-10
+                justify-start
+              text-cafe hover:text-cafehover 
+                font-semibold 
+                text-lg lg:text-xl 
+                px-4 py-4 
+                transition duration-300 
+                ease-in-out 
+                border-b-2 border-cafeclaro hover:border-cafehover           "
+                href={item.href}
               >
-                {item}
+                {item.name}
               </Link>
             </NavbarMenuItem>
           ))}

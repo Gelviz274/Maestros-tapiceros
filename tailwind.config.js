@@ -10,11 +10,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cafe: "#4e3e35",
-        cafeclaro: "#685340",
         beige: "#f3d7c6",
-        cafehover: "#695b53",
+        beigecard: "#E8DAD3",
         beigehover: "#e6ac8b",
+        beigefondo: "rgba(245, 245, 220, 0.5)",
+        
+        cafe: "#4e3e35",
+        cafeclaro: "#7D6855",
+        cafehover: "#695b53",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
