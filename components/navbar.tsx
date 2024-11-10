@@ -1,18 +1,30 @@
 "use client"
+
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import { NavbarMenuToggle, NavbarMenuItem, NavbarMenu } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import React from "react";
 import {
-  MuebleIcon,
+  Armchair,
+  Car,
+  Ship,
+  Bed,
+  DoorOpen,
+  Sofa,
+  Lightbulb,
+  ArrowRight
+} from 'lucide-react';
+import {
+  
   DoorIcon,
   ChevronDown,
   BarcoIcon,
   CarIcon,
-  AvionIcon,
+  BeedIcon,
   TelephoneIcon,
-  Mail
+  Mail,
+  CouchIcon
 } from "@/components/icons";
 
 export default function App() {
@@ -97,70 +109,126 @@ export default function App() {
                 </DropdownTrigger>
               </NavbarItem>
               <DropdownMenu
-                aria-label="ACME features"
+                aria-label="Dropdown Menu"
                 className="w-[340px] bg-white p-0"
                 itemClasses={{
                   base: "gap-4",
                 }}
               >
+
+
+
                 <DropdownItem
                   key="Muebles"
-                  description="Tapizamos todo tipo de muebles, desde sofás y sillones hasta cabeceros y básicas."
-                  startContent={<MuebleIcon />}
+                  description="Ofrecemos restauración y tapizado de todo tipo de muebles, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
+                  startContent={<Armchair className="h-7 w-7"/>}
                   className=" hover:focus:bg-beige "
-                  href="/servicios"
+                  onClick={() => {
+                    window.location.href = "/servicios#muebles";
+                  }}
                   textValue="Muebles"
                 >
                   <span className="font-bold">
                     Muebles
                   </span>
                 </DropdownItem>
+
+
+
+
+
                 <DropdownItem
                   key="Tapizado de puertas"
-                  description="El tapizado de puertas es una excelente manera de renovar y personalizar cualquier puerta, ya sea interior o exterior."
-                  startContent={<DoorIcon />}
-                  className=" hover:focus:bg-beige "
-                  href="/servicios"
+                  description="Transformamos puertas con tapizados elegantes y personalizados, brindando un acabado de lujo y, opcionalmente, aislamiento acústico y térmico para mayor confort y estilo."
+                  startContent={<DoorOpen />}
+                  className="hover:focus:bg-beige"
                   textValue="Puertas"
+                  onClick={() => {
+                    window.location.href = "/servicios#puertas";
+                  }}
                 >
                   <span className="font-bold">
                     Puertas
                   </span>
                 </DropdownItem>
+
+
+
+                <DropdownItem
+                  key="Cabeceros y basicamas"
+                  description="Diseñamos cabeceros y basicamas a medida, adaptados a cualquier estilo de decoración, desde elegantes capitoné hasta minimalistas, para un toque único en su dormitorio."
+                  startContent={<Bed />}
+                  className=" hover:focus:bg-beige "
+                  onClick={() => {
+                    window.location.href = "/servicios#cabeceros";
+                  }}
+                  textValue="Cabeceros y basicamas"
+                >
+                  <span className="font-bold">
+                    Cabeceros y basicamas
+                  </span>
+                </DropdownItem>
+
+
+
+                <DropdownItem
+                  key="Sofas"
+                  description="Ofrecemos renovación completa de sofás y sillas, incluyendo retapizado, reparación de estructuras y actualización de rellenos, asegurando máxima durabilidad y comodidad."
+                  startContent={<Sofa />}
+                  className=" hover:focus:bg-beige "
+                  onClick={() => {
+                    window.location.href = "/servicios#sofas";
+                  }}
+                  textValue="Sillas de coches"
+                >
+                  <span className="font-bold">
+                    Sofás y sillas
+                  </span>
+                </DropdownItem>
+
+
+                <DropdownItem
+                  key="Barcos"
+                  description="Proporcionamos soluciones de tapicería para embarcaciones y exteriores, con materiales resistentes al agua y rayos UV, perfectos para ambientes marinos y exteriores."
+                  startContent={<Ship />}
+                  className=" hover:focus:bg-beige "
+                  onClick={() => {
+                    window.location.href = "/servicios#nauticas";
+                  }}
+                  textValue="Barcos"
+                >
+                  <span className="font-bold">
+                    Náuticas y toldos
+                  </span>
+                </DropdownItem>
+
                 <DropdownItem
                   key="Sillas de coches"
-                  description="Ofrecemos un servicio especializado en el tapizado de sillas de coches, garantizando que nuestros materiales cumplen con las normativas específicas del sector automotriz."
-                  startContent={<CarIcon />}
+                  description="Brindamos tapizado personalizado para automóviles, usando materiales resistentes y de alta calidad. Nuestro servicio incluye renovación de asientos, puertas y detalles interiores, adaptados al estilo y necesidades del cliente"
+                  startContent={<Car />}
                   className=" hover:focus:bg-beige "
-                  href="/servicios"
+                  onClick={() => {
+                    window.location.href = "/servicios#tapizadoAutomotriz";
+                  }}
                   textValue="Sillas de coches"
                 >
                   <span className="font-bold">
                     Sillas de coches
                   </span>
                 </DropdownItem>
+                
                 <DropdownItem
-                  key="supreme_support"
-                  description="Contamos con la experiencia necesaria para el tapizado de sillas de aviación, utilizando materiales de alta calidad que cumplen con las exigentes normativas del sector aeronáutico."
-                  startContent={<AvionIcon />}
+                  key="Proyectos"
+                  description="Realizamos proyectos personalizados para necesidades únicas, colaborando en la creación de mobiliario especial, instalaciones artísticas y otras soluciones innovadoras."
+                  startContent={<Lightbulb />}
                   className=" hover:focus:bg-beige "
-                  href="/servicios"
-                  textValue="Sillas de avión"
+                  onClick={() => {
+                    window.location.href = "/servicios#proyectosEspeciales";
+                  }}
+                  textValue="Proyectos Especiales"
                 >
                   <span className="font-bold">
-                    Sillas de aviación
-                  </span>
-                </DropdownItem>
-                <DropdownItem
-                  key="Barcos"
-                  description="Ofrecemos servicios de tapicería especializados para barcos, utilizando materiales marinos resistentes al agua y al sol."
-                  startContent={<BarcoIcon />}
-                  className=" hover:focus:bg-beige "
-                  href="/servicios"
-                  textValue="Barcos"
-                >
-                  <span className="font-bold">
-                    Barcos
+                    Proyectos especiales
                   </span>
                 </DropdownItem>
               </DropdownMenu>
@@ -170,8 +238,8 @@ export default function App() {
 
 
             <NavbarItem>
-              <Link className="font-bold text-cafe text-lg" 
-              href={siteConfig.navItems[1].href}>
+              <Link className="font-bold text-cafe text-lg"
+                href={siteConfig.navItems[1].href}>
                 Sobre nosotros
               </Link>
             </NavbarItem>

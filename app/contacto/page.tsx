@@ -1,8 +1,14 @@
 import React from 'react'
+import Contact from '@/components/Contact';
+"useContext"
 
 function Contacto() {
   return (
-    <div>Contacto</div>
+    <div>Contacto
+
+
+      <Contact />
+    </div>
   )
 }
 

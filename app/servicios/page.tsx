@@ -18,6 +18,7 @@ import { motion } from "framer-motion"
 
 const services = [
   {
+    id: "muebles",
     icon: <Armchair className="w-8 h-8" />,
     title: "Muebles",
     description: "Restauración y tapizado de todo tipo de muebles",
@@ -25,6 +26,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=800&h=600&auto=format&fit=crop"
   },
   {
+    id: "puertas",
     icon: <DoorOpen className="w-8 h-8" />,
     title: "Puertas",
     description: "Tapizado de puertas con acabados premium",
@@ -32,6 +34,7 @@ const services = [
     image: "/puertas.png"
   },
   {
+    id: "cabeceros",
     icon: <Bed className="w-8 h-8" />,
     title: "Cabeceros y Basicamas",
     description: "Diseños personalizados a medida",
@@ -39,6 +42,7 @@ const services = [
     image: "/FOTOS/cabecero.jpeg"
   },
   {
+    id: "sofas",
     icon: <Sofa className="w-8 h-8" />,
     title: "Sofás y Sillas",
     description: "Renovación completa de asientos",
@@ -46,6 +50,7 @@ const services = [
     image: "/FOTOS/sofa_blanco.jpeg"
   },
   {
+    id: "nauticas",
     icon: <Ship className="w-8 h-8" />,
     title: "Náuticas y Toldos",
     description: "Soluciones especializadas para exterior",
@@ -53,6 +58,7 @@ const services = [
     image: "/botesblancos.png"
   },
   {
+    id: "tapizadoAutomotriz",
     icon: <Car className="w-8 h-8" />,
     title: "Tapizado Automotriz y Aviación",
     description: "Tapizado profesional para vehículos",
@@ -60,6 +66,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?w=800&h=600&auto=format&fit=crop"
   },
   {
+    id: "proyectosEspeciales",
     icon: <Lightbulb className="w-8 h-8" />,
     title: "Proyectos Especiales",
     description: "Soluciones personalizadas únicas",
@@ -74,12 +81,13 @@ function Servicios() {
   return (
     <div className='h-full'>
       <div className="flex flex-col min-h-screen -mt-20"
-        style={{ backgroundImage: 'url("sofablanco.jpg")',
+        style={{
+          backgroundImage: 'url("sofablanco.jpg")',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          
-         }}
+
+        }}
         rel="preload">
         <section
           className="h-screen bg-transparent grid place-items-center bg-cover bg-center w-full">
@@ -124,16 +132,18 @@ function Servicios() {
           </div>
           <div className="space-y-24">
             {services.map((service, index) => (
-              <ServiceDetail
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                longDescription={service.longDescription}
-                image={service.image}
-                isReversed={index % 2 === 1}
-              />
+              <div key={service.id} id={service.id}>
+                <ServiceDetail
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  longDescription={service.longDescription}
+                  image={service.image}
+                  isReversed={index % 2 === 1}
+                />
+              </div>
             ))}
+
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Footer  from "@/components/Footer";
 import { Providers } from "./providers";
-import Contact from '@/components/Contact';
+
 import { siteConfig } from "@/config/site";
 import WhatsappButton from '@/components/whatsappbutton';
 // FUENTES //
@@ -55,7 +55,6 @@ export default function RootLayout({
             <main className="container mx-auto max-w-full flex-grow bg-w">
               {children}
             </main>
-            <Contact />
             <Footer />
           </div>
           <div>
