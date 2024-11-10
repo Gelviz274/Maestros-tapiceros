@@ -46,7 +46,7 @@ const CardComponent = () => {
     };
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full relative p-5">
             {items.map(item => (
                 <motion.div
                     key={item.id}
@@ -101,8 +101,8 @@ const CardComponent = () => {
 
                             {/* Modal de imagen centrado */}
                             <motion.div
-                                className="relative bg-white flex flex-col rounded-lg overflow-hidden shadow-lg  w-full max-w-[800px]  h-full max-h-[500px] md:w-3/4 lg:w-2/3 xl:w-1/2"
-                                initial={{ opacity: 0, scale: 0.95 }}
+                                className="relative bg-white flex flex-col rounded-lg overflow-hidden shadow-lg  w-full max-w-[800px]  h-full max-h-[800px] md:w-3/4 lg:w-2/3 xl:w-1/2"
+                                initial={{ opacity: 0, scale: 1 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 170, damping: 30 }}
@@ -112,7 +112,7 @@ const CardComponent = () => {
                             >
                                 {/* Contenedor para el carrusel */}
                                 <motion.div
-                                    className="relative w-full h-[400px] overflow-hidden"
+                                    className="relative w-full h-full overflow-hidden"
                                     key={selectedItem.id}
                                     initial={{ x: 1000 }}
                                     animate={{ x: 0 }}
@@ -126,16 +126,17 @@ const CardComponent = () => {
                                         key={selectedItem.id} // Usamos 'key' para garantizar que la animación se active al cambiar la imagen
                                         src={selectedItem.imageUrl}
                                         alt={selectedItem.title}
-                                        className="w-full h-full max-h-[450px] object-cover mb-4 rounded-t-lg"
+                                        className="w-full h-full object-cover mb-4 rounded-t-lg"
                                     />
                                 </motion.div>
 
-                                <motion.h2 
+                                {/*   <motion.h2 
                                 className="text-lg flex items-center justify-center h-[50px] font-bold text-center mb-1"
                                 initial= {{ y: 0,}}
                                 >
                                     {selectedItem.title}
                                 </motion.h2>
+                                */}
                             </motion.div>
                         </motion.div>
                     </>

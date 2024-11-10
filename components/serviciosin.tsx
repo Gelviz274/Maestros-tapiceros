@@ -6,7 +6,8 @@ import {
     CouchIcon,
     BoatIcon,
     SillonIcon,
-    CarroIcon
+    CarroIcon,
+    stars
 } from '@/components/icons';
 
 type Props = {
@@ -22,7 +23,7 @@ const services: Props[] = [
     { id: 3, icon: CouchIcon, tittle: "Sofás y sillas", description: "Restauración y tapizado de todo tipo de mobiliario" },
     { id: 4, icon: CarroIcon, tittle: " Tapizado automotriz y aviación ", description: "Especialistas en interiores de vehiculos y aeronaves" },
     { id: 5, icon: BoatIcon, tittle: " Náuticas y toldos", description: "Soluciones para embarcaviones y exteriores" },
-    { id: 6, icon: SillonIcon, tittle: " Proyectos Especiales", description: "Cualquier necesidad de tapicería que pueda imaginar" },
+    { id: 6, icon: stars, tittle: " Proyectos Especiales", description: "Cualquier necesidad de tapicería que pueda imaginar" },
 ]
 
 function Servicesin() {

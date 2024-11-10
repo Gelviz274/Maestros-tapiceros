@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Maestros Tapiceros",
-  description: "Somos Maestros Tapiceros y estamos ubicados en Madrid, ofreciendo servicios de tapicería y fabricación de muebles de alta calidad para renovar y embellecer sus espacios.",
+  name: "Maestros Tapiceros | Servicios de Tapicería y Restauración en Madrid | Tapizado de Muebles, Automóviles y Más",
+  description: "Descubre los servicios de Maestros Tapiceros en Madrid: tapicería de muebles, restauración de sofás y sillas, tapizado automotriz y aviación, fabricación de cabeceros y basicamas a medida, tapizado náutico y de toldos, y proyectos personalizados. Calidad, experiencia y atención al detalle para transformar y renovar tus espacios.",
   navItems: [
     {
       label: "Inicio",
@@ -13,7 +13,7 @@ export const siteConfig = {
       href: "/quienes-somos",
     },
     {
-      label: "Servicios",
+      label: "Nuestros Servicios",
       href: "/servicios",
     },
     {
@@ -31,7 +31,7 @@ export const siteConfig = {
       href: "/quienes-somos",
     },
     {
-      label: "Servicios",
+      label: "Nuestros Servicios",
       href: "/servicios",
     },
     {

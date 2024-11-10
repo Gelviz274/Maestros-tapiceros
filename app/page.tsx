@@ -1,15 +1,14 @@
 "use client"
-import Image from 'next/image';
+
 import React from 'react'
 import '../styles/globals.css';
 import Parallax from '@/components/parallax';
 import { motion } from 'framer-motion';
 import CardComponent from '@/components/cards';
 import Servicesin from '@/components/serviciosin';
-
 import { ShieldIcon, ClockIcon, StarIcon } from '@/components/icons';
-
 import { FunctionComponent, SVGProps } from 'react';
+
 
 type Seccion1 = {
     id: number;
@@ -26,8 +25,9 @@ const seccion1: Seccion1[] = [
 function Homepage() {
     return (
 
-        <article className='h-full -mt-16 bg-no-repeat'
-            style={{ backgroundImage: 'url("fondo.jpg")' }}>
+        <article className='h-full -mt-16 bg-no-repeat '
+            style={{ backgroundImage: 'url("fondo.jpg")' }}
+            rel="preload">
             { /*PANTALLA PRINCIPAL*/}
             <Parallax>
                 <section
@@ -56,7 +56,7 @@ function Homepage() {
 
 
                 { /*SECCION 1 - CONTENT 1 */}
-                <section className='h-auto rounded-sm bg-[#fff] flex flex-col px-32 py-12 items-center justify-start'>
+                <section className='h-auto rounded-sm bg-[#fff] flex flex-col  px-44 py-12 items-center justify-start'>
                     <motion.h2
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -93,7 +93,7 @@ function Homepage() {
                         ))}
                     </motion.div>
                     <motion.div
-                        className="flex items-center justify-center gap-5 text-center p-5 mt-16 bg-beigecard rounded-2xl w-11/12 h-[450px]">
+                        className="flex items-center justify-center gap-5 text-center p-5 mt-16 bg-beigecard rounded-2xl w-11/12 h-[450px] ">
                         <div className='w-2/4 p-4 flex flex-col items-start justify-start h-full'>
                             <h2 className='text-4xl font-bold text-cafe py-5 px-2 text-start'>Nuestra Historia</h2 >
                             <p className='text-cafeclaro text-start text-2xl py-3 px-2'><strong>Maestros Tapiceros en Madrid</strong>, un oficio que comenzó como parte de nuestra tradición familiar. <strong>Con más de 25 años de experiencia</strong>,
@@ -139,7 +139,7 @@ function Homepage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                     className="text-6xl text-center grid place-items-center font-bold text-cafe gap-5 w-4/5 mt-10">
-                    Transformaciones que Hablan por Sí Mismas
+                    Transformaciones que hablan por sí mismas
                 </motion.h2>
                 <motion.h3
                     initial={{ opacity: 0 }}
@@ -151,6 +151,9 @@ function Homepage() {
                 </motion.h3>
                 <CardComponent />
             </section>
+
+
+
         </article>
     )
 }

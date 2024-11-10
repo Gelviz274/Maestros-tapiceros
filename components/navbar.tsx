@@ -44,7 +44,7 @@ export default function App() {
             className="hover:text-cafehover text-cafe">
             info@maestrostapiceros.com
             <Mail
-            className="ml-1"/>
+              className="ml-1" />
           </Link>
         </h3>
       </div>
@@ -109,6 +109,7 @@ export default function App() {
                   startContent={<MuebleIcon />}
                   className=" hover:focus:bg-beige "
                   href="/servicios"
+                  textValue="Muebles"
                 >
                   <span className="font-bold">
                     Muebles
@@ -120,6 +121,7 @@ export default function App() {
                   startContent={<DoorIcon />}
                   className=" hover:focus:bg-beige "
                   href="/servicios"
+                  textValue="Puertas"
                 >
                   <span className="font-bold">
                     Puertas
@@ -131,6 +133,7 @@ export default function App() {
                   startContent={<CarIcon />}
                   className=" hover:focus:bg-beige "
                   href="/servicios"
+                  textValue="Sillas de coches"
                 >
                   <span className="font-bold">
                     Sillas de coches
@@ -142,6 +145,7 @@ export default function App() {
                   startContent={<AvionIcon />}
                   className=" hover:focus:bg-beige "
                   href="/servicios"
+                  textValue="Sillas de avión"
                 >
                   <span className="font-bold">
                     Sillas de aviación
@@ -153,6 +157,7 @@ export default function App() {
                   startContent={<BarcoIcon />}
                   className=" hover:focus:bg-beige "
                   href="/servicios"
+                  textValue="Barcos"
                 >
                   <span className="font-bold">
                     Barcos
@@ -165,7 +170,8 @@ export default function App() {
 
 
             <NavbarItem>
-              <Link className="font-bold text-cafe text-lg" href={siteConfig.navItems[1].href}>
+              <Link className="font-bold text-cafe text-lg" 
+              href={siteConfig.navItems[1].href}>
                 Sobre nosotros
               </Link>
             </NavbarItem>
@@ -179,7 +185,7 @@ export default function App() {
 
           <NavbarContent justify="end">
             <NavbarItem>
-              <Button as={Link} className="bg-cafe text-beige text-large" href="#" variant="flat" >
+              <Button as={Link} className="bg-cafe text-beige text-large" href="#contacto" variant="flat" >
                 Cotizar ahora
               </Button>
             </NavbarItem>
@@ -197,24 +203,32 @@ export default function App() {
             <NavbarMenuItem key={`${item}-${index}`} className="bg-blue">
               <Link
                 className="
-                w-full 
-                flex 
-                gap-10
-                justify-start
-              text-cafe hover:text-cafehover 
-                font-semibold 
-                text-lg lg:text-xl 
-                px-4 py-4 
-                transition duration-300 
-                ease-in-out 
-                border-b-2 border-cafeclaro hover:border-cafehover           "
+          w-full 
+          flex 
+          gap-10
+          justify-start
+          text-cafe hover:text-cafehover 
+          font-semibold 
+          text-lg lg:text-xl 
+          px-4 py-4 
+          transition duration-300 
+          ease-in-out 
+          border-b-2 border-cafeclaro hover:border-cafehover
+        "
                 href={item.href}
+                onClick={() => {
+                  setTimeout(() => {
+                    setIsMenuOpen(false); // Cierra el menú después de 2 segundos
+                  }, 1000);
+                }}
               >
                 {item.name}
               </Link>
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
+
+
       </Navbar>
     </div>
 
