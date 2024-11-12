@@ -1,13 +1,15 @@
 "use client"
 import React from 'react';
+import { handleForm } from '@/app/action';
 import { TelefonoIcon, ClockIcon, LocationBorder, MailBorder, UserIcon } from '@/components/icons';
 import GoogleMap from '@/components/mapsgoogle';
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
+import Link from 'next/link';
 
 
 function Contact() {
     return (
-        <div className="bg-beigecard p-10 w-full h-[1050px] flex flex-col items-center justify-start px-44">
+        <div className="bg-beigecard p-10 w-full h-[1050px] flex flex-col items-center justify-start px-44" id="form">
             <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -30,7 +32,10 @@ function Contact() {
                             <TelefonoIcon className='w-[30px] h-full text-cafe' />
                             <div className='flex flex-col ml-2'>
                                 <h2 className='text-xl font-bold text-cafe'>Telefono</h2>
-                                <p>641 388 422</p>
+                                <Link href="tel:641388422"
+                                    className="hover:text-cafe text-zinc-600">
+                                    641 388 422
+                                </Link>
                             </div>
                         </li>
                         <li className='flex h-[55px]'>
@@ -44,7 +49,10 @@ function Contact() {
                             <MailBorder className='w-[30px] h-full text-cafe' />
                             <div className='flex flex-col ml-2'>
                                 <h2 className='text-xl font-bold text-cafe'>Correo electrónico</h2>
-                                <p>info@maestrostapiceros.com</p>
+                                <Link href="mailto:info@maestrostapiceros.com"
+                                    className="hover:text-cafehover text-zinc-600">
+                                    info@maestrostapiceros.com
+                                </Link>
                             </div>
                         </li>
                         <li className='flex h-[55px]'>
@@ -62,7 +70,7 @@ function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-2 w-2/4 p-5">
-                    <form className="space-y-6 bg-white shadow-md rounded px-8 pt-6 pb-8 h-auto">
+                    <form action={handleForm} className="space-y-6 bg-white shadow-md rounded px-8 pt-6 pb-8 h-auto">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                                 Nombre Completo
