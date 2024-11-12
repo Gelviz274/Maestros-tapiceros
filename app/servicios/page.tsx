@@ -1,4 +1,5 @@
 "use client"
+"use context"
 import React from 'react'
 import {
   Armchair,
@@ -13,6 +14,7 @@ import {
 import { WorkProcess } from '@/components/proceso'
 import { ServiceDetail } from '@/components/Servicedetail'
 import { motion } from "framer-motion"
+import Contact from '@/components/Contact';
 
 
 
@@ -102,7 +104,12 @@ function Servicios() {
             </strong>
             <motion.button
               whileTap={{ scale: 0.9 }}
-
+              onClick={() => {
+                const contactSection = document.querySelector("#form");
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }}
               whileHover={{ scale: 1.1 }}
               className="bg-[#202020]  text-white hover:text-[#d9d9d9] font-semibold py-4 px-8  rounded text-2xl">
               Contactanos
@@ -150,6 +157,7 @@ function Servicios() {
 
       {/* Work Process Section */}
       <WorkProcess />
+      <Contact />
     </div>
   )
 }

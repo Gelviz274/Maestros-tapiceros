@@ -4,7 +4,7 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Footer  from "@/components/Footer";
 import { Providers } from "./providers";
-
+import ScrollToTopButton from "@/components/btnicio";
 import { siteConfig } from "@/config/site";
 import WhatsappButton from '@/components/whatsappbutton';
 // FUENTES //
@@ -59,6 +59,7 @@ export default function RootLayout({
           </div>
           <div>
             {/* Otros componentes o contenido */}
+            <ScrollToTopButton />
             <WhatsappButton phoneNumber="34641388422" message="¡Hola! Quisiera más información." />
         </div>
         </Providers>

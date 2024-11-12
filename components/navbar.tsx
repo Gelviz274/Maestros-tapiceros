@@ -13,10 +13,11 @@ import {
   DoorOpen,
   Sofa,
   Lightbulb,
-  ArrowRight
+  ArrowRight,
+  List
 } from 'lucide-react';
 import {
-  
+
   DoorIcon,
   ChevronDown,
   BarcoIcon,
@@ -117,11 +118,24 @@ export default function App() {
               >
 
 
-
+                <DropdownItem
+                  key="All"
+                  description="Mira unos de los servicios que brindamos."
+                  startContent={<List className="h-7 w-7" />}
+                  className=" hover:focus:bg-beige "
+                  onClick={() => {
+                    window.location.href = "/servicios";
+                  }}
+                  textValue="All services"
+                >
+                  <span className="font-bold">
+                    Todos los servicios
+                  </span>
+                </DropdownItem>
                 <DropdownItem
                   key="Muebles"
                   description="Ofrecemos restauración y tapizado de todo tipo de muebles, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
-                  startContent={<Armchair className="h-7 w-7"/>}
+                  startContent={<Armchair className="h-7 w-7" />}
                   className=" hover:focus:bg-beige "
                   onClick={() => {
                     window.location.href = "/servicios#muebles";
@@ -216,7 +230,7 @@ export default function App() {
                     Sillas de coches
                   </span>
                 </DropdownItem>
-                
+
                 <DropdownItem
                   key="Proyectos"
                   description="Realizamos proyectos personalizados para necesidades únicas, colaborando en la creación de mobiliario especial, instalaciones artísticas y otras soluciones innovadoras."
@@ -253,7 +267,7 @@ export default function App() {
 
           <NavbarContent justify="end">
             <NavbarItem>
-              <Button as={Link} className="bg-cafe text-beige text-large" href="#contacto" variant="flat" >
+              <Button as={Link} className="bg-cafe text-beige text-large" href="#form" variant="flat" >
                 Cotizar ahora
               </Button>
             </NavbarItem>

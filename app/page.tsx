@@ -1,5 +1,5 @@
 "use client"
-
+"use context"
 import React from 'react'
 import '../styles/globals.css';
 import Parallax from '@/components/parallax';
@@ -8,7 +8,8 @@ import CardComponent from '@/components/cards';
 import Servicesin from '@/components/serviciosin';
 import { ShieldIcon, ClockIcon, StarIcon } from '@/components/icons';
 import { FunctionComponent, SVGProps } from 'react';
-
+import Contact from '@/components/Contact';
+import Clients from '@/components/clients';
 
 type Seccion1 = {
     id: number;
@@ -44,11 +45,18 @@ function Homepage() {
                         </strong>
                         <motion.button
                             whileTap={{ scale: 0.9 }}
-
                             whileHover={{ scale: 1.1 }}
-                            className="bg-[#202020]  text-white hover:text-[#d9d9d9] font-semibold py-4 px-8  rounded text-2xl">
-                            Contactanos
+                            className="bg-[#202020] text-white hover:text-[#d9d9d9] font-semibold py-4 px-8 rounded text-2xl"
+                            onClick={() => {
+                                const contactSection = document.querySelector("#form");
+                                if (contactSection) {
+                                    contactSection.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }}
+                        >
+                            Contáctanos
                         </motion.button>
+
                     </motion.h2>
                 </section>
 
@@ -113,6 +121,7 @@ function Homepage() {
                 </section>
 
             </Parallax>
+            <Clients />
             <section className="bg-white p-10 w-full h-auto flex flex-col items-center justify-start px-44">
                 <motion.h2
                     initial={{ opacity: 0 }}
@@ -151,7 +160,7 @@ function Homepage() {
                 </motion.h3>
                 <CardComponent />
             </section>
-
+            <Contact />
 
 
         </article>

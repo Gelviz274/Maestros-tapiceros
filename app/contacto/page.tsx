@@ -4,9 +4,7 @@ import Contact from '@/components/Contact';
 
 function Contacto() {
   return (
-    <div>Contacto
-
-
+    <div>
       <Contact />
     </div>
   )

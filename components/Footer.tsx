@@ -1,8 +1,7 @@
 "use client"
 import Link from "next/link"
-import { Button } from "@nextui-org/button"
 import { motion } from "framer-motion"
-import Image from "next/image"
+
 
 import { Location, TelephoneIcon, Mail, Instagram, Facebook } from "@/components/icons"
 

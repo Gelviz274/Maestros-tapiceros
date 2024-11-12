@@ -1,6 +1,6 @@
 {
-	"name": "next-app-template",
-	"version": "0.0.1",
+	"name": "maestros_tapiceros",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbo",
@@ -9,6 +9,7 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
+		"@getbrevo/brevo": "^2.2.0",
 		"@nextui-org/button": "2.0.38",
 		"@nextui-org/code": "2.0.33",
 		"@nextui-org/input": "2.2.5",
@@ -54,5 +55,20 @@
 		"tailwind-variants": "0.1.20",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.0.4"
-	}
+	},
+	"description": "This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).",
+	"main": "next.config.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gelviz274/Maestros-tapiceros.git"
+	},
+	"author": "Juan David Gelviz y Tatiana Castaño Morales",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Gelviz274/Maestros-tapiceros/issues"
+	},
+	"homepage": "https://github.com/Gelviz274/Maestros-tapiceros#readme"
 }
