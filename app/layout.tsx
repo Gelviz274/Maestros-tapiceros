@@ -1,18 +1,23 @@
-// app/layout.tsx
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
+// Paquetes externos
 import clsx from "clsx";
-import Footer from "@/components/Footer";
+import { Metadata, Viewport } from "next";
+
+// Proveedores
 import { Providers } from "./providers";
+
+// Componentes
+import Footer from "@/components/Footer";
+import Header from "@/components/navbar";
 import ScrollToTopButton from "@/components/btnicio";
-import { siteConfig } from "@/config/site";
 import WhatsappButton from "@/components/whatsappbutton";
 import CookieConsent from "@/components/cookies";
 
-
-// FUENTES //
+// Configuración del sitio y fuentes
+import { siteConfig } from "@/config/site";
 import { RobotoFont } from "@/config/fonts";
-import Header from "@/components/navbar";
+
+// Estilos globales
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -29,9 +34,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-  ],
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "white" }],
 };
 
 export default function RootLayout({
@@ -45,27 +48,26 @@ export default function RootLayout({
       <body
         className={clsx(
           "max-screen bg-white montserrat antialiased",
-          RobotoFont.className
+          RobotoFont.className,
         )}
         rel="preload"
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-            {/* Envolvemos el contenido con LoadingWrapper */}
-            <div className="relative flex flex-col h-screen">
-              <Header />
-              <main className="container mx-auto max-w-full flex-grow bg-w">
-                {children}
-              </main>
-
-              <CookieConsent />
-              <Footer />
-            </div>
-            <div>
-              {/* Otros componentes o contenido */}
-              <ScrollToTopButton />
-              <WhatsappButton phoneNumber="34641388422" message="¡Hola! Quisiera más información." />
-            </div>
-          
+          <div className="relative flex h-screen flex-col">
+            <Header />
+            <main className="container mx-auto max-w-full flex-grow bg-w">
+              {children}
+            </main>
+            <CookieConsent />
+            <Footer />
+          </div>
+          <div>
+            <ScrollToTopButton />
+            <WhatsappButton
+              message="¡Hola! Quisiera más información."
+              phoneNumber="34641388422"
+            />
+          </div>
         </Providers>
       </body>
     </html>

@@ -1,31 +1,33 @@
-import * as brevo from '@getbrevo/brevo';
+import * as brevo from "@getbrevo/brevo";
 
 // Crear instancia de la API de emails transaccionales
 const apiInstance = new brevo.TransactionalEmailsApi();
 
 // Establecer la clave API de Brevo correctamente
 apiInstance.setApiKey(
-    brevo.TransactionalEmailsApiApiKeys.apiKey,
-    process.env.BREVO_API_KEY as string
+  brevo.TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY as string,
 );
 
 interface Params {
-    name: string;
-    email: string;
-    phone: string;  
-    message: string;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
 }
 
 export async function sendEmail({ name, email, phone, message }: Params) {
-    try {
-        const smtpEmail = new brevo.SendSmtpEmail();
-        
-        smtpEmail.subject = `Solicitud de contacto de ${name}`;
-        
-        // Quién recibe el email
-        smtpEmail.to = [{ email: "jgelvizjaimes13@gmail.com", name: "Juan David Gelviz" }];
-        
-        smtpEmail.htmlContent = `
+  try {
+    const smtpEmail = new brevo.SendSmtpEmail();
+
+    smtpEmail.subject = `Solicitud de contacto de ${name}`;
+
+    // Quién recibe el email
+    smtpEmail.to = [
+      { email: "jgelvizjaimes13@gmail.com", name: "Juan David Gelviz" },
+    ];
+
+    smtpEmail.htmlContent = `
             <html>
   <head>
     <style>
@@ -99,17 +101,18 @@ export async function sendEmail({ name, email, phone, message }: Params) {
 </html>
 
         `;
-        
-        // Quién envía el email
-        smtpEmail.sender = { name: "Pagina Maestros Tapiceros", email: "jgelvizjaimes15@gmail.com" };
 
-        //AHI TOCA PONER LA CUENTA DE ELLOS PERO CREAR UNA SOLO PARA LA PAGINA O PONEMOS LA MISMA QUE ENVIE Y RECIBA LOS CORREOS QUE ENVIA LA PAGINA JAAJ
+    // Quién envía el email
+    smtpEmail.sender = {
+      name: "Pagina Maestros Tapiceros",
+      email: "jgelvizjaimes15@gmail.com",
+    };
 
-        // Enviar el correo
-        await apiInstance.sendTransacEmail(smtpEmail);
+    //AHI TOCA PONER LA CUENTA DE ELLOS PERO CREAR UNA SOLO PARA LA PAGINA O PONEMOS LA MISMA QUE ENVIE Y RECIBA LOS CORREOS QUE ENVIA LA PAGINA JAAJ
 
-        console.log('Correo enviado exitosamente');
-    } catch (error) {
-        console.error('Error al enviar el email:', error);
-    }
+    // Enviar el correo
+    await apiInstance.sendTransacEmail(smtpEmail);
+  } catch (error) {
+    console.error("Error al enviar el email:", error);
+  }
 }

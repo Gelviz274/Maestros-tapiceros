@@ -39,7 +39,7 @@ export const title = tv({
         "foreground",
         "beige",
         "cafe",
-        "cafehover"
+        "cafehover",
       ],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },

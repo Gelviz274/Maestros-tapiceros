@@ -1,37 +1,38 @@
-"use client"
+"use client";
 
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
-import { NavbarMenuToggle, NavbarMenuItem, NavbarMenu } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/react";
+import {
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
+} from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import React from "react";
-import {
-  Armchair,
-  Car,
-  Ship,
-  Bed,
-  DoorOpen,
-  Lightbulb,
-} from 'lucide-react';
-import {
-  ChevronDown,
-  TelephoneIcon,
-  Mail,
-} from "@/components/icons";
+import { Armchair, Car, Ship, Bed, DoorOpen, Lightbulb } from "lucide-react";
+import { ChevronDown, TelephoneIcon, Mail } from "@/components/icons";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-
-  // ELEMENTOS PARA EL MENU DE NAVEGACIÓN EN CELULARES // 
+  // ELEMENTOS PARA EL MENU DE NAVEGACIÓN EN CELULARES //
   const menuItems = [
     { name: "Inicio", href: "/" }, // Página principal
     { name: "Servicios", href: "/servicios" }, // Página de servicios
     { name: "Sobre Nosotros", href: "/quienes-somos" }, // Página sobre nosotros
     { name: "Contacto", href: "/contacto" }, // Página de contacto
   ];
-
-
 
   return (
     <div className="W-full z-50">
@@ -65,7 +66,6 @@ export default function App() {
         </div>
       </div>
 
-
       <Navbar
         shouldHideOnScroll
         className="bg-white flex min-h-36 w-full justify-around items-center"
@@ -74,7 +74,6 @@ export default function App() {
         onMenuOpenChange={setIsMenuOpen}
         isBlurred={false}
       >
-
         <div className="flex justify-evenly items-center gap-10 w-full">
           <NavbarBrand>
             <Link href="/">
@@ -86,19 +85,19 @@ export default function App() {
                 loading="eager"
                 alt="Logo Maestros Tapiceros"
                 priority
-
               />
             </Link>
           </NavbarBrand>
 
           <NavbarContent className="hidden lg:flex gap-10 font-bold text-cafe">
             <NavbarItem>
-              <Link className="font-bold text-cafe hover:text-cafe_hover text-large" href="/">
+              <Link
+                className="font-bold text-cafe hover:text-cafe_hover text-large"
+                href="/"
+              >
                 Inicio
               </Link>
             </NavbarItem>
-
-
 
             <Dropdown className="!bg-white">
               <NavbarItem>
@@ -121,9 +120,6 @@ export default function App() {
                   base: "gap-4",
                 }}
               >
-
-
-
                 <DropdownItem
                   key="Muebles"
                   description="Ofrecemos restauración y tapizados de todo tipo, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
@@ -134,14 +130,8 @@ export default function App() {
                   }}
                   textValue="Muebles"
                 >
-                  <span className="font-bold">
-                    Muebles, sofás y sillas
-                  </span>
+                  <span className="font-bold">Muebles, sofás y sillas</span>
                 </DropdownItem>
-
-
-
-
 
                 <DropdownItem
                   key="Tapizado de puertas"
@@ -153,12 +143,8 @@ export default function App() {
                     window.location.href = "/servicios#puertas";
                   }}
                 >
-                  <span className="font-bold">
-                    Puertas
-                  </span>
+                  <span className="font-bold">Puertas</span>
                 </DropdownItem>
-
-
 
                 <DropdownItem
                   key="Cabeceros y basicamas"
@@ -170,11 +156,8 @@ export default function App() {
                   }}
                   textValue="Cabeceros y basicamas"
                 >
-                  <span className="font-bold">
-                    Cabeceros y basicamas
-                  </span>
+                  <span className="font-bold">Cabeceros y basicamas</span>
                 </DropdownItem>
-
 
                 <DropdownItem
                   key="Barcos"
@@ -186,9 +169,7 @@ export default function App() {
                   }}
                   textValue="Barcos"
                 >
-                  <span className="font-bold">
-                    Náuticas y toldos
-                  </span>
+                  <span className="font-bold">Náuticas y toldos</span>
                 </DropdownItem>
 
                 <DropdownItem
@@ -201,9 +182,7 @@ export default function App() {
                   }}
                   textValue="Sillas de coches"
                 >
-                  <span className="font-bold">
-                    Sillas de coches
-                  </span>
+                  <span className="font-bold">Sillas de coches</span>
                 </DropdownItem>
 
                 <DropdownItem
@@ -216,25 +195,25 @@ export default function App() {
                   }}
                   textValue="Proyectos Especiales"
                 >
-                  <span className="font-bold">
-                    Proyectos especiales
-                  </span>
+                  <span className="font-bold">Proyectos especiales</span>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
 
-
-
-
             <NavbarItem>
-              <Link className="font-bold text-cafe text-lg"
-                href={siteConfig.navItems[1].href}>
+              <Link
+                className="font-bold text-cafe text-lg"
+                href={siteConfig.navItems[1].href}
+              >
                 Sobre nosotros
               </Link>
             </NavbarItem>
 
             <NavbarItem>
-              <Link className="font-bold text-cafe text-large" href={siteConfig.navItems[3].href}>
+              <Link
+                className="font-bold text-cafe text-large"
+                href={siteConfig.navItems[3].href}
+              >
                 Contacto
               </Link>
             </NavbarItem>
@@ -242,20 +221,26 @@ export default function App() {
 
           <NavbarContent justify="end">
             <NavbarItem>
-              <Button as={Link} className="bg-cafe text-beige text-large" href="#form" variant="flat" >
+              <Button
+                as={Link}
+                className="bg-cafe text-beige text-large"
+                href="#form"
+                variant="flat"
+              >
                 Cotizar ahora
               </Button>
             </NavbarItem>
           </NavbarContent>
         </div>
         <NavbarContent className="lg:hidden" justify="start">
-          <NavbarMenuToggle aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"} />
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          />
         </NavbarContent>
 
-
-
-
-        <NavbarMenu className={`gap-25 mt-28 p-8 bg-beigecard ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+        <NavbarMenu
+          className={`gap-25 mt-28 p-8 bg-beigecard ${isMenuOpen ? "block" : "hidden"} md:block`}
+        >
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`} className="bg-blue">
               <Link
@@ -284,10 +269,7 @@ export default function App() {
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
-
-
       </Navbar>
     </div>
-
   );
 }

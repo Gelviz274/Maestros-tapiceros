@@ -1,10 +1,14 @@
-"use client"
-import Link from "next/link"
-import { motion } from "framer-motion"
+"use client";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-
-import { Location, TelephoneIcon, Mail, Instagram, Facebook } from "@/components/icons"
-
+import {
+  Location,
+  TelephoneIcon,
+  Mail,
+  Instagram,
+  Facebook,
+} from "@/components/icons";
 
 export default function Footer() {
   return (
@@ -39,7 +43,10 @@ export default function Footer() {
             className="flex items-center text-sm sm:text-base"
           >
             <TelephoneIcon className="w-4 h-4 mr-1" />
-            <Link href="tel:641388422" className="hover:text-cafehover text-black">
+            <Link
+              href="tel:641388422"
+              className="hover:text-cafehover text-black"
+            >
               641 388 422
             </Link>
           </motion.h1>
@@ -51,7 +58,10 @@ export default function Footer() {
             className="flex items-center text-sm sm:text-base"
           >
             <Mail className="w-4 h-4 mr-1" />
-            <Link href="mailto:info@maestrostapiceros.com" className="hover:text-cafehover text-black">
+            <Link
+              href="mailto:info@maestrostapiceros.com"
+              className="hover:text-cafehover text-black"
+            >
               info@maestrostapiceros.com
             </Link>
           </motion.h1>
@@ -89,6 +99,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-
-  )
+  );
 }

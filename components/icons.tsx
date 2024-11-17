@@ -26,11 +26,7 @@ export const stars: React.FC<IconSvgProps> = ({
       strokeLinejoin="round"
     />
   </svg>
-)
-
-
-
-
+);
 
 export const UserIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -51,8 +47,7 @@ export const UserIcon: React.FC<IconSvgProps> = ({
       fill="currentColor"
     />
   </svg>
-)
-
+);
 
 export const TelefonoIcon: React.FC<IconSvgProps> = ({
   size = 20,
@@ -69,7 +64,6 @@ export const TelefonoIcon: React.FC<IconSvgProps> = ({
     {...props}
   >
     <path
-
       d="M21,15v3.93a2,2,0,0,1-2.29,2A18,18,0,0,1,3.14,5.29,2,2,0,0,1,5.13,3H9a1,1,0,0,1,1,.89,10.74,10.74,0,0,0,1,3.78,1,1,0,0,1-.42,1.26l-.86.49a1,1,0,0,0-.33,1.46,14.08,14.08,0,0,0,3.69,3.69,1,1,0,0,0,1.46-.33l.49-.86A1,1,0,0,1,16.33,13a10.74,10.74,0,0,0,3.78,1A1,1,0,0,1,21,15Z"
       style={{
         fill: "none",
@@ -80,8 +74,7 @@ export const TelefonoIcon: React.FC<IconSvgProps> = ({
       }}
     />
   </svg>
-)
-
+);
 
 export const TelephoneIcon: React.FC<IconSvgProps> = ({
   size = 20,
@@ -96,7 +89,6 @@ export const TelephoneIcon: React.FC<IconSvgProps> = ({
     width={size || width}
     height={size || height}
     viewBox="0 0 100 100"
-
     xmlSpace="preserve"
     fill="#4e3e35"
     {...props}
@@ -108,7 +100,7 @@ export const TelephoneIcon: React.FC<IconSvgProps> = ({
       />
     </g>
   </svg>
-)
+);
 
 export const Mail: React.FC<IconSvgProps> = ({
   size = 20,
@@ -117,7 +109,6 @@ export const Mail: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <svg
-
     width={size || width}
     height={size || height}
     viewBox="0 0 100 100"
@@ -144,9 +135,7 @@ export const Mail: React.FC<IconSvgProps> = ({
       />
     </g>
   </svg>
-)
-
-
+);
 
 export const MailBorder: React.FC<IconSvgProps> = ({
   size = 24,
@@ -155,7 +144,6 @@ export const MailBorder: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <svg
-
     width={size || width}
     height={size || height}
     viewBox="0 0 24 24"
@@ -169,13 +157,7 @@ export const MailBorder: React.FC<IconSvgProps> = ({
     <rect width="20" height="16" x="2" y="4" rx="2" />
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
-)
-
-
-
-
-
-
+);
 
 export const ChevronDown: React.FC<IconSvgProps> = ({
   size = 16,
@@ -225,7 +207,7 @@ export const BarcoIcon: React.FC<IconSvgProps> = ({
       fill="#292D32"
     />
   </svg>
-)
+);
 
 export const DoorIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -279,8 +261,7 @@ export const MuebleIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M2.461 7.02a1.61 1.61 0 0 1 1.61 1.611v2.456h7.857V8.63a1.61 1.61 0 1 1 1.988 1.566v4.634a.476.476 0 0 1-.475.475H2.559a.476.476 0 0 1-.475-.475v-4.634A1.61 1.61 0 0 1 2.46 7.02zm1.059-.894a2.68 2.68 0 0 0-.227-.084V4.669A1.111 1.111 0 0 1 4.4 3.56h7.198a1.111 1.111 0 0 1 1.108 1.109v1.373a2.679 2.679 0 0 0-.227.084 2.717 2.717 0 0 0-1.66 2.505v1.347H5.18V8.631a2.72 2.72 0 0 0-1.66-2.505z" />
   </svg>
-)
-
+);
 
 export const CarIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -290,7 +271,6 @@ export const CarIcon: React.FC<IconSvgProps> = ({
 }) => (
   <svg
     id="svg2"
-
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -301,13 +281,9 @@ export const CarIcon: React.FC<IconSvgProps> = ({
     xmlSpace="preserve"
     {...props}
   >
-
-
-    <path
-      d="M214.662,100.752l-75.97,316.401h-21.079H0v91.456h47.573v590.639h136.569 v-96.685h831.716v96.685h136.496V508.609H1200v-91.456h-117.686h-21.006l-75.971-316.401h-770.67H214.662z M255.136,162.272h689.713 l61.187,254.887H193.934l61.186-254.887H255.136z M87.088,585.972l190.44,70.329v91.384l-190.44-70.329V585.972L87.088,585.972z  M1112.818,585.972v91.384l-190.362,70.329v-91.456L1112.818,585.972z M415.833,825.036h368.193v91.384H415.833V825.036z"
-    />
+    <path d="M214.662,100.752l-75.97,316.401h-21.079H0v91.456h47.573v590.639h136.569 v-96.685h831.716v96.685h136.496V508.609H1200v-91.456h-117.686h-21.006l-75.971-316.401h-770.67H214.662z M255.136,162.272h689.713 l61.187,254.887H193.934l61.186-254.887H255.136z M87.088,585.972l190.44,70.329v91.384l-190.44-70.329V585.972L87.088,585.972z  M1112.818,585.972v91.384l-190.362,70.329v-91.456L1112.818,585.972z M415.833,825.036h368.193v91.384H415.833V825.036z" />
   </svg>
-)
+);
 
 export const AvionIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -326,10 +302,9 @@ export const AvionIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M12.382 5.304 10.096 7.59l.006.02L11.838 14a.908.908 0 0 1-.211.794l-.573.573a.339.339 0 0 1-.566-.08l-2.348-4.25-.745-.746-1.97 1.97a3.311 3.311 0 0 1-.75.504l.44 1.447a.875.875 0 0 1-.199.79l-.175.176a.477.477 0 0 1-.672 0l-1.04-1.039-.018-.02-.788-.786-.02-.02-1.038-1.039a.477.477 0 0 1 0-.672l.176-.176a.875.875 0 0 1 .79-.197l1.447.438a3.322 3.322 0 0 1 .504-.75l1.97-1.97-.746-.744-4.25-2.348a.339.339 0 0 1-.08-.566l.573-.573a.909.909 0 0 1 .794-.211l6.39 1.736.02.006 2.286-2.286c.37-.372 1.621-1.02 1.993-.65.37.372-.279 1.622-.65 1.993z" />
   </svg>
-)
+);
 
-
-// SECCCION DE ICONOS DE CARDS // 
+// SECCCION DE ICONOS DE CARDS //
 
 export const ShieldIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -347,7 +322,7 @@ export const ShieldIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M19.63,3.65a1,1,0,0,0-.84-.2,8,8,0,0,1-6.22-1.27,1,1,0,0,0-1.14,0A8,8,0,0,1,5.21,3.45a1,1,0,0,0-.84.2A1,1,0,0,0,4,4.43v7.45a9,9,0,0,0,3.77,7.33l3.65,2.6a1,1,0,0,0,1.16,0l3.65-2.6A9,9,0,0,0,20,11.88V4.43A1,1,0,0,0,19.63,3.65ZM18,11.88a7,7,0,0,1-2.93,5.7L12,19.77,8.93,17.58A7,7,0,0,1,6,11.88V5.58a10,10,0,0,0,6-1.39,10,10,0,0,0,6,1.39Z" />
   </svg>
-)
+);
 
 export const ClockIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -365,7 +340,7 @@ export const ClockIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M15.09814,12.63379,13,11.42285V7a1,1,0,0,0-2,0v5a.99985.99985,0,0,0,.5.86621l2.59814,1.5a1.00016,1.00016,0,1,0,1-1.73242ZM12,2A10,10,0,1,0,22,12,10.01114,10.01114,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.00917,8.00917,0,0,1,12,20Z" />
   </svg>
-)
+);
 
 export const StarIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -383,9 +358,7 @@ export const StarIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68a1,1,0,0,0,.4,1,1,1,0,0,0,1.05.07L12,18.76l5.1,2.68a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.89l.72,4.19-3.76-2a1,1,0,0,0-.94,0l-3.76,2,.72-4.19a1,1,0,0,0-.29-.89l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
   </svg>
-)
-
-
+);
 
 // ICONS SECCION DE SERVICIOS INDEX //
 export const HomeIcon: React.FC<IconSvgProps> = ({
@@ -402,11 +375,9 @@ export const HomeIcon: React.FC<IconSvgProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M11.336 2.253a1 1 0 0 1 1.328 0l9 8a1 1 0 0 1-1.328 1.494L20 11.45V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7.55l-.336.297a1 1 0 0 1-1.328-1.494l9-8zM6 9.67V19h3v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5h3V9.671l-6-5.333-6 5.333zM13 19v-4h-2v4h2z"
-    />
+    <path d="M11.336 2.253a1 1 0 0 1 1.328 0l9 8a1 1 0 0 1-1.328 1.494L20 11.45V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7.55l-.336.297a1 1 0 0 1-1.328-1.494l9-8zM6 9.67V19h3v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5h3V9.671l-6-5.333-6 5.333zM13 19v-4h-2v4h2z" />
   </svg>
-)
+);
 
 export const BeedIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -424,8 +395,7 @@ export const BeedIcon: React.FC<IconSvgProps> = ({
   >
     <path d="M7,12.5a3,3,0,1,0-3-3A3,3,0,0,0,7,12.5Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,7,8.5Zm13-2H12a1,1,0,0,0-1,1v6H3v-8a1,1,0,0,0-2,0v13a1,1,0,0,0,2,0v-3H21v3a1,1,0,0,0,2,0v-9A3,3,0,0,0,20,6.5Zm1,7H13v-5h7a1,1,0,0,1,1,1Z" />
   </svg>
-)
-
+);
 
 export const CouchIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -447,7 +417,7 @@ export const CouchIcon: React.FC<IconSvgProps> = ({
       </g>
     </g>
   </svg>
-)
+);
 
 export const BoatIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -460,7 +430,6 @@ export const BoatIcon: React.FC<IconSvgProps> = ({
     height={size || height}
     viewBox="0 0 24 24"
     fill="#E8DAD3"
-
     {...props}
   >
     <path
@@ -471,8 +440,7 @@ export const BoatIcon: React.FC<IconSvgProps> = ({
       strokeLinejoin="round"
     />
   </svg>
-)
-
+);
 
 export const SillonIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -492,8 +460,7 @@ export const SillonIcon: React.FC<IconSvgProps> = ({
       <path d="M60,26c0-1.474-0.81-2.75-2-3.444v-2.634C58,15.002,53.998,11,49.078,11h-14.25c-1.773,0-3.456,0.585-4.828,1.665 C28.628,11.585,26.945,11,25.172,11h-14.25C6.002,11,2,15.002,2,19.922v2.634C0.81,23.25,0,24.526,0,26v20h1v3h6v-3h1h44h1v3h6v-3 h1V26z M8,30h17.172c1.556,0,3.02,0.606,4.12,1.706c0,0,0.001,0.001,0.001,0.001L30,32.415l0.706-0.707 c0,0,0.001-0.001,0.001-0.001c1.1-1.1,2.564-1.706,4.12-1.706H52v3H8V30z M54,35v-2v-5v-1.7c0-0.915,0.482-1.742,1.229-2.108 c0.203-0.1,0.401-0.153,0.602-0.174c0.043-0.004,0.085-0.012,0.13-0.013c0.07-0.002,0.141,0.006,0.212,0.014 c0.046,0.004,0.092,0.007,0.138,0.014c0.115,0.021,0.232,0.051,0.354,0.094l0.158,0.056C57.515,24.497,58,25.191,58,26v18h-4V35z  M49.078,13C52.895,13,56,16.105,56,19.922V22c-2.206,0-4,1.794-4,4v0.3V28H34.828c-1.364,0-2.671,0.353-3.828,1.005V14.441 C32.062,13.513,33.404,13,34.828,13H49.078z M4,19.922C4,16.105,7.105,13,10.922,13h14.25c1.424,0,2.767,0.513,3.828,1.441v14.563 C27.843,28.353,26.536,28,25.172,28H8v-1.7V26c0-2.206-1.794-4-4-4V19.922z M2,26c0-0.809,0.485-1.503,1.177-1.818l0.158-0.056 c0.122-0.044,0.239-0.073,0.353-0.094c0.046-0.007,0.092-0.01,0.139-0.014c0.071-0.007,0.142-0.015,0.212-0.014 c0.044,0.001,0.086,0.009,0.129,0.013c0.201,0.022,0.4,0.075,0.603,0.174C5.518,24.558,6,25.385,6,26.3V28v5v2v9H2V26z M5,47H3v-1 h2V47z M52,44H8v-9h44V44z M57,47h-2v-1h2V47z" />
     </g>
   </svg>
-)
-
+);
 
 export const CarroIcon: React.FC<IconSvgProps> = ({
   size = 45,
@@ -505,7 +472,6 @@ export const CarroIcon: React.FC<IconSvgProps> = ({
     width={size || width}
     height={size || height}
     viewBox="0 0 24 24"
-
     fill="none"
     {...props}
   >
@@ -517,23 +483,7 @@ export const CarroIcon: React.FC<IconSvgProps> = ({
       d="M17 11h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1h-1.5M17 11h-6.5m6.5 0-2.417-4.029A2 2 0 0 0 12.868 6H10.5m0 0v5m0-5H7.64a2 2 0 0 0-1.962 1.608L5 11m5.5 0H5m.5 5H4a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2v0m.5 5a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0m0 0h5m0 0a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0"
     />
   </svg>
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+);
 
 export const SearchIcon = (props: IconSvgProps) => (
   <svg
@@ -591,10 +541,6 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
   );
 };
 
-
-
-
-
 export const Location: React.FC<IconSvgProps> = ({
   size = 20,
   width,
@@ -615,8 +561,7 @@ export const Location: React.FC<IconSvgProps> = ({
       d="M33,13.924C33,6.893,27.594,1,20.51,1S8,6.897,8,13.93C8,16.25,8.324,18,9.423,20H9.402l10.695,20.621 c0.402,0.551,0.824-0.032,0.824-0.032C20.56,41.13,31.616,20,31.616,20h-0.009C32.695,18,33,16.246,33,13.924z M14.751,13.528 c0-3.317,2.579-6.004,5.759-6.004c3.179,0,5.76,2.687,5.76,6.004s-2.581,6.005-5.76,6.005C17.33,19.533,14.751,16.846,14.751,13.528 z"
     />
   </svg>
-)
-
+);
 
 export const LocationBorder: React.FC<IconSvgProps> = ({
   size = 20,
@@ -636,14 +581,10 @@ export const LocationBorder: React.FC<IconSvgProps> = ({
     strokeLinejoin="round"
     {...props}
   >
-    <path
-      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-    />
+    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
     <circle cx="12" cy="10" r="3" />
   </svg>
-)
-
-
+);
 
 // REDES SOCIALES //
 
@@ -665,7 +606,7 @@ export const Instagram: React.FC<IconSvgProps> = ({
     <path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164 5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31 3.155 3.155 0 0 1 0 6.31z" />
     <circle cx={15.156} cy={4.858} r={1.237} />
   </svg>
-)
+);
 
 export const Facebook: React.FC<IconSvgProps> = ({
   size = 20,
@@ -686,8 +627,7 @@ export const Facebook: React.FC<IconSvgProps> = ({
       d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"
     />
   </svg>
-)
-
+);
 
 export const Whatsapp: React.FC<IconSvgProps> = ({
   size = 20,
@@ -717,4 +657,4 @@ export const Whatsapp: React.FC<IconSvgProps> = ({
       </g>
     </g>
   </svg>
-)
+);

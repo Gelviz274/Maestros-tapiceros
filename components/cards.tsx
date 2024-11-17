@@ -18,7 +18,11 @@ const items: Item[] = [
   { id: 8, title: "Sofá amarillo", imageUrl: "/FOTOS/Sofa-amarillo-p.jpeg" },
   { id: 9, title: "Mueble corazones", imageUrl: "/FOTOS/Corazones.jpeg" },
   { id: 10, title: "Sillón con mesa", imageUrl: "/FOTOS/blanco.jpeg" },
-  { id: 11, title: "Silla de cuero y mesa de cuero", imageUrl: "/FOTOS/Silla-mesa-cuero.jpeg" },
+  {
+    id: 11,
+    title: "Silla de cuero y mesa de cuero",
+    imageUrl: "/FOTOS/Silla-mesa-cuero.jpeg",
+  },
   { id: 12, title: "Sillón Azul", imageUrl: "/FOTOS/Sillon-azul.jpeg" },
 ];
 
