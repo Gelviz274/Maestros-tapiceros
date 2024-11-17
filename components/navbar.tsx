@@ -11,21 +11,12 @@ import {
   Ship,
   Bed,
   DoorOpen,
-  Sofa,
   Lightbulb,
-  ArrowRight,
-  List
 } from 'lucide-react';
 import {
-
-  DoorIcon,
   ChevronDown,
-  BarcoIcon,
-  CarIcon,
-  BeedIcon,
   TelephoneIcon,
   Mail,
-  CouchIcon
 } from "@/components/icons";
 
 export default function App() {
@@ -35,8 +26,8 @@ export default function App() {
   // ELEMENTOS PARA EL MENU DE NAVEGACIÓN EN CELULARES // 
   const menuItems = [
     { name: "Inicio", href: "/" }, // Página principal
-    { name: "Sobre Nosotros", href: "/quienes-somos" }, // Página sobre nosotros
     { name: "Servicios", href: "/servicios" }, // Página de servicios
+    { name: "Sobre Nosotros", href: "/quienes-somos" }, // Página sobre nosotros
     { name: "Contacto", href: "/contacto" }, // Página de contacto
   ];
 
@@ -44,23 +35,37 @@ export default function App() {
 
   return (
     <div className="W-full z-50">
-      <div className="bg-beigecard flex justify-around items-center text-cafe h-10 font-bold ">
-        <h3>Llamanos al:
-          <Link href="tel:641388422"
-            className="hover:text-cafehover text-cafe ml-1 items-center">
-            641 388 422
-            <TelephoneIcon />
-          </Link>
-        </h3>
-        <h3>
-          <Link href="mailto:info@maestrostapiceros.com"
-            className="hover:text-cafehover text-cafe">
-            info@maestrostapiceros.com
-            <Mail
-              className="ml-1" />
-          </Link>
-        </h3>
+      <div className="bg-beigecard flex flex-wrap justify-center sm:justify-around items-center text-cafe h-auto font-bold px-4 py-1">
+        {/* Teléfono */}
+        <div className="flex items-center mb-1 sm:mb-0">
+          <h3 className="flex items-center text-center sm:text-left text-sm sm:text-base">
+            Llámanos al:
+            <Link
+              href="tel:641388422"
+              className="hover:text-cafehover text-cafe ml-1 flex items-center"
+              aria-label="Teléfono de contacto: 641 388 422"
+            >
+              641 388 422
+              <TelephoneIcon className="ml-1 w-4 h-4" />
+            </Link>
+          </h3>
+        </div>
+        {/* Correo */}
+        <div className="flex items-center">
+          <h3 className="flex items-center text-center sm:text-left text-sm sm:text-base">
+            <Link
+              href="mailto:info@maestrostapiceros.com"
+              className="hover:text-cafehover text-cafe flex items-center"
+              aria-label="Correo electrónico: info@maestrostapiceros.com"
+            >
+              info@maestrostapiceros.com
+              <Mail className="ml-1 w-4 h-4" />
+            </Link>
+          </h3>
+        </div>
       </div>
+
+
       <Navbar
         shouldHideOnScroll
         className="bg-white flex min-h-36 w-full justify-around items-center"
@@ -118,23 +123,10 @@ export default function App() {
               >
 
 
-                <DropdownItem
-                  key="All"
-                  description="Mira unos de los servicios que brindamos."
-                  startContent={<List className="h-7 w-7" />}
-                  className=" hover:focus:bg-beige "
-                  onClick={() => {
-                    window.location.href = "/servicios";
-                  }}
-                  textValue="All services"
-                >
-                  <span className="font-bold">
-                    Todos los servicios
-                  </span>
-                </DropdownItem>
+
                 <DropdownItem
                   key="Muebles"
-                  description="Ofrecemos restauración y tapizado de todo tipo de muebles, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
+                  description="Ofrecemos restauración y tapizados de todo tipo, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
                   startContent={<Armchair className="h-7 w-7" />}
                   className=" hover:focus:bg-beige "
                   onClick={() => {
@@ -143,7 +135,7 @@ export default function App() {
                   textValue="Muebles"
                 >
                   <span className="font-bold">
-                    Muebles
+                    Muebles, sofás y sillas
                   </span>
                 </DropdownItem>
 
@@ -184,23 +176,6 @@ export default function App() {
                 </DropdownItem>
 
 
-
-                <DropdownItem
-                  key="Sofas"
-                  description="Ofrecemos renovación completa de sofás y sillas, incluyendo retapizado, reparación de estructuras y actualización de rellenos, asegurando máxima durabilidad y comodidad."
-                  startContent={<Sofa />}
-                  className=" hover:focus:bg-beige "
-                  onClick={() => {
-                    window.location.href = "/servicios#sofas";
-                  }}
-                  textValue="Sillas de coches"
-                >
-                  <span className="font-bold">
-                    Sofás y sillas
-                  </span>
-                </DropdownItem>
-
-
                 <DropdownItem
                   key="Barcos"
                   description="Proporcionamos soluciones de tapicería para embarcaciones y exteriores, con materiales resistentes al agua y rayos UV, perfectos para ambientes marinos y exteriores."
@@ -218,7 +193,7 @@ export default function App() {
 
                 <DropdownItem
                   key="Sillas de coches"
-                  description="Brindamos tapizado personalizado para automóviles, usando materiales resistentes y de alta calidad. Nuestro servicio incluye renovación de asientos, puertas y detalles interiores, adaptados al estilo y necesidades del cliente"
+                  description="Ofrecemos tapizado personalizado para automóviles con materiales resistentes y de alta calidad. Renovamos asientos, puertas y detalles interiores, adaptándolos al estilo y necesidades del cliente."
                   startContent={<Car />}
                   className=" hover:focus:bg-beige "
                   onClick={() => {
@@ -280,7 +255,7 @@ export default function App() {
 
 
 
-        <NavbarMenu className={`gap-25 mt-28 p-8 bg-beige ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+        <NavbarMenu className={`gap-25 mt-28 p-8 bg-beigecard ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`} className="bg-blue">
               <Link

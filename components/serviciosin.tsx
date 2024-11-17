@@ -20,7 +20,7 @@ type Props = {
 const services: Props[] = [
     { id: 1, icon: HomeIcon, tittle: "Tapizado de paredes y puertas", description: "Trasforme sus espacios con elegantes acabados tapizados" },
     { id: 2, icon: BeedIcon, tittle: "Cabeceros y basicamas", description: "Diseños personalizados para su dormitorio" },
-    { id: 3, icon: CouchIcon, tittle: "Sofás y sillas", description: "Restauración y tapizado de todo tipo de mobiliario" },
+    { id: 3, icon: CouchIcon, tittle: "Muebles, sofás y sillas", description: "Restauración y tapizado de todo tipo de mobiliario" },
     { id: 4, icon: CarroIcon, tittle: " Tapizado automotriz y aviación ", description: "Especialistas en interiores de vehiculos y aeronaves" },
     { id: 5, icon: BoatIcon, tittle: " Náuticas y toldos", description: "Soluciones para embarcaviones y exteriores" },
     { id: 6, icon: stars, tittle: " Proyectos Especiales", description: "Cualquier necesidad de tapicería que pueda imaginar" },

@@ -31,7 +31,7 @@ const LogoCloud = () => {
     ];
 
     return (
-        <div className="bg-[#202020] py-24 overflow-hidden flex flex-col w-full h-auto justify-center items-center">
+        <div className="bg-[#202020] py-24 overflow-hidden flex flex-col w-full h-auto justify-center items-center ">
             <div className="mx-auto w-full px-6 lg:px-8 flex flex-col items-center justify-center">
                 <div className="text-center space-y-4 mb-16">
                     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -42,7 +42,7 @@ const LogoCloud = () => {
                     </p>
                 </div>
                 <div className="relative">
-                    <div className="flex space-x-20 whitespace-nowrap">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 justify-center mx-auto items-center">
                         {logos.map((logo, index) => (
                             <motion.div
                                 key={`${logo.name}-${index}`}

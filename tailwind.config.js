@@ -18,6 +18,7 @@ module.exports = {
         cafe: "#4e3e35",
         cafeclaro: "#7D6855",
         cafehover: "#695b53",
+        
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

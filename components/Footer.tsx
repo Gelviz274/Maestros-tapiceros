@@ -8,34 +8,38 @@ import { Location, TelephoneIcon, Mail, Instagram, Facebook } from "@/components
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black h-[350px] w-full ">
-      <div className="flex  w-full h-full flex-col justify-center items-center">
+    <footer className="bg-white text-black w-full">
+      <div className="flex flex-col items-center justify-center p-4 space-y-4">
+        {/* Logo */}
         <img
           src="/Logo-HD.jpeg"
-          alt="logo"
-          width={200}
-          height={200}
+          alt="Logo Maestros Tapiceros"
+          className="w-32 h-32 sm:w-40 sm:h-40"
         />
-        <div className="flex justify-center items-center mt-3">
-          <Location />
+
+        {/* Dirección */}
+        <div className="flex items-center text-center space-x-2">
+          <Location className="w-5 h-5" />
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            className="text-sm sm:text-base"
           >
             Calle Canteras, local 8, 28694 Madrid, MADRID
           </motion.h1>
         </div>
-        <div className="flex justify-center items-center w-3/4 gap-4 mt-2">
+
+        {/* Contacto */}
+        <div className="flex flex-col sm:flex-row sm:justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center"
+            className="flex items-center text-sm sm:text-base"
           >
-            <TelephoneIcon />
-            <Link href="tel:641388422"
-              className="hover:text-cafehover text-black ml-1 items-center">
+            <TelephoneIcon className="w-4 h-4 mr-1" />
+            <Link href="tel:641388422" className="hover:text-cafehover text-black">
               641 388 422
             </Link>
           </motion.h1>
@@ -44,48 +48,47 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex"
+            className="flex items-center text-sm sm:text-base"
           >
-            <Mail
-              className="mr-1" />
-            <Link href="mailto:info@maestrostapiceros.com"
-              className="hover:text-cafehover text-black">
+            <Mail className="w-4 h-4 mr-1" />
+            <Link href="mailto:info@maestrostapiceros.com" className="hover:text-cafehover text-black">
               info@maestrostapiceros.com
             </Link>
           </motion.h1>
         </div>
-        <div className="flex justify-center items-center h-[60p] w-full gap-5 mt-2">
 
-          {/*BOTON DE INSTAGRAM*/}
+        {/* Redes Sociales */}
+        <div className="flex space-x-4 mt-2">
           <motion.a
-          className="rounded-full bg-black p-3"
-          initial={{opacity: 0}}
-          animate={{ opacity: 1}}
-          transition={{ duration: 0.5 }}
-          href="#"
-          aria-label="¡Siguenos en Instagram!"
+            className="rounded-full bg-black p-2 hover:bg-gray-700 transition"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            href="#"
+            aria-label="¡Síguenos en Instagram!"
           >
-            <Instagram 
-            className="text-white hover:text-beige transition-colors-opacity"/>
+            <Instagram className="w-5 h-5 text-white" />
           </motion.a>
-
-        {/*BOTON DE FACEBOOK*/}
           <motion.a
-          className="rounded-full bg-black p-3"
-          initial={{opacity: 0}}
-          animate={{ opacity: 1}}
-          transition={{ duration: 0.5 }}
-          href="#"
-          aria-label="¡Visitanos en Facebook!"
+            className="rounded-full bg-black p-2 hover:bg-gray-700 transition"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            href="#"
+            aria-label="¡Visítanos en Facebook!"
           >
-            <Facebook 
-            className="text-white hover:text-beige transition-colors-opacity"/>
+            <Facebook className="w-5 h-5 text-white" />
           </motion.a>
         </div>
       </div>
-      <div className="flex w-full h-[50px]  bg-black flex-col justify-center items-center gap-5">
-        <p className="text-white">© 2024 Maestros Tapiceros. Todos los derechos reservados.</p>
+
+      {/* Copyright */}
+      <div className="bg-black py-2">
+        <p className="text-white text-center text-xs sm:text-sm">
+          © 2024 Maestros Tapiceros. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
+
   )
 }

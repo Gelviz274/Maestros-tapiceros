@@ -1,21 +1,18 @@
-
+// app/layout.tsx
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import Footer  from "@/components/Footer";
+import Footer from "@/components/Footer";
 import { Providers } from "./providers";
 import ScrollToTopButton from "@/components/btnicio";
 import { siteConfig } from "@/config/site";
-import WhatsappButton from '@/components/whatsappbutton';
-// FUENTES //
-{/*
-import { montserrat } from "@/config/fonts";
-import { garamont } from "@/config/fonts";
-import { comfortaa } from "@/config/fonts";
-import {ebGaramond} from "@/config/fonts"; */}
-import {RobotoFont} from "@/config/fonts";
+import WhatsappButton from "@/components/whatsappbutton";
+import CookieConsent from "@/components/cookies";
 
-import  Header  from "@/components/navbar";
+
+// FUENTES //
+import { RobotoFont } from "@/config/fonts";
+import Header from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +23,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  keywords: [
+    // Tus palabras clave
+  ],
 };
 
 export const viewport: Viewport = {
@@ -45,23 +45,27 @@ export default function RootLayout({
       <body
         className={clsx(
           "max-screen bg-white montserrat antialiased",
-          RobotoFont.className,
+          RobotoFont.className
         )}
         rel="preload"
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen">
-            <Header />
-            <main className="container mx-auto max-w-full flex-grow bg-w">
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <div>
-            {/* Otros componentes o contenido */}
-            <ScrollToTopButton />
-            <WhatsappButton phoneNumber="34641388422" message="¡Hola! Quisiera más información." />
-        </div>
+            {/* Envolvemos el contenido con LoadingWrapper */}
+            <div className="relative flex flex-col h-screen">
+              <Header />
+              <main className="container mx-auto max-w-full flex-grow bg-w">
+                {children}
+              </main>
+
+              <CookieConsent />
+              <Footer />
+            </div>
+            <div>
+              {/* Otros componentes o contenido */}
+              <ScrollToTopButton />
+              <WhatsappButton phoneNumber="34641388422" message="¡Hola! Quisiera más información." />
+            </div>
+          
         </Providers>
       </body>
     </html>

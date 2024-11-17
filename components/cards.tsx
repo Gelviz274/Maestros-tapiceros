@@ -14,12 +14,12 @@ const items: Item[] = [
   { id: 4, title: "Sofá", imageUrl: "/FOTOS/Sofa-blanco-cliente.jpeg" },
   { id: 5, title: "DASD", imageUrl: "/FOTOS/Sofa-gris-p.jpeg" },
   { id: 6, title: "JKADA", imageUrl: "/FOTOS/Sofa-negro-p1.jpeg" },
-  { id: 7, title: "Sofas de cuero", imageUrl: "/FOTOS/Sofas-cuero.jpeg" },
-  { id: 8, title: "Sofa amarillo", imageUrl: "/FOTOS/Sofa-amarillo-p.jpeg" },
+  { id: 7, title: "Sofás de cuero", imageUrl: "/FOTOS/Sofas-cuero.jpeg" },
+  { id: 8, title: "Sofá amarillo", imageUrl: "/FOTOS/Sofa-amarillo-p.jpeg" },
   { id: 9, title: "Mueble corazones", imageUrl: "/FOTOS/Corazones.jpeg" },
   { id: 10, title: "Sillón con mesa", imageUrl: "/FOTOS/blanco.jpeg" },
   { id: 11, title: "Silla de cuero y mesa de cuero", imageUrl: "/FOTOS/Silla-mesa-cuero.jpeg" },
-  { id: 12, title: "Sillon Azul", imageUrl: "/FOTOS/Sillon-azul.jpeg" },
+  { id: 12, title: "Sillón Azul", imageUrl: "/FOTOS/Sillon-azul.jpeg" },
 ];
 
 const CardComponent = () => {
@@ -33,7 +33,7 @@ const CardComponent = () => {
     if (selectedId !== null) {
       const currentIndex = items.findIndex((item) => item.id === selectedId);
       const nextIndex = (currentIndex + 1) % items.length;
-      setDirection(1); // Dirección hacia la derecha
+      setDirection(1);
       setSelectedId(items[nextIndex].id);
     }
   };
@@ -43,25 +43,25 @@ const CardComponent = () => {
     if (selectedId !== null) {
       const currentIndex = items.findIndex((item) => item.id === selectedId);
       const prevIndex = (currentIndex - 1 + items.length) % items.length;
-      setDirection(-1); // Dirección hacia la izquierda
+      setDirection(-1);
       setSelectedId(items[prevIndex].id);
     }
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full relative p-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full relative p-5">
       {items.map((item) => (
         <motion.div
           key={item.id}
           layoutId={item.id.toString()}
           onClick={() => setSelectedId(item.id)}
-          className="rounded-lg overflow-hidden cursor-pointer shadow-lg bg-white w-full"
+          className="rounded-lg overflow-hidden cursor-pointer shadow-lg bg-white"
           transition={{ type: "spring", stiffness: 200, damping: 30 }}
         >
           <motion.img
             src={item.imageUrl}
             alt={item.title}
-            className="w-full h-72 object-cover"
+            className="w-full h-64 sm:h-72 object-cover"
           />
         </motion.div>
       ))}
@@ -69,30 +69,27 @@ const CardComponent = () => {
       <AnimatePresence>
         {selectedItem && (
           <>
-            {/* Fondo gris con botones de cerrar y navegación */}
             <motion.div
-              onClick={() => setSelectedId(null)} // Cierra la tarjeta solo si se hace clic fuera del modal
+              onClick={() => setSelectedId(null)}
               className="fixed inset-0 bg-gray-800 bg-opacity-50 z-10 flex items-center justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              {/* Botón de cerrar en la esquina superior derecha del fondo gris */}
               <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedId(null);
                 }}
-                className="absolute font-bold top-4 right-4 bg-gray-200 rounded-full py-5 px-7 w-auto h-auto hover:bg-gray-300 z-20"
+                className="absolute top-4 right-4 bg-gray-200 rounded-full px-6 py-4 hover:bg-gray-300 z-20"
                 whileHover={{ scale: 1.1 }}
               >
                 ✕
               </motion.button>
 
-              {/* Botones de navegación */}
               <motion.button
                 onClick={handlePrevious}
-                className="absolute left-4 text-3xl text-cafe bg-gray-200 rounded-full py-2 px-4 hover:bg-gray-300 z-20"
+                className="absolute left-4 sm:left-10 text-lg sm:text-2xl bg-gray-200 rounded-full p-4 hover:bg-gray-300 z-20"
                 whileHover={{ scale: 1.1 }}
               >
                 {"<"}
@@ -100,30 +97,27 @@ const CardComponent = () => {
 
               <motion.button
                 onClick={handleNext}
-                className="absolute right-4 text-3xl text-cafe bg-gray-200 rounded-full py-2 px-4 hover:bg-gray-300 z-20"
+                className="absolute right-4 sm:right-10 text-lg sm:text-2xl bg-gray-200 rounded-full p-4 hover:bg-gray-300 z-20"
                 whileHover={{ scale: 1.1 }}
               >
                 {">"}
               </motion.button>
 
-              {/* Modal de imagen centrado */}
               <motion.div
-                className="relative bg-white flex flex-col rounded-lg overflow-hidden shadow-lg w-full max-w-[800px] h-full max-h-[800px] md:w-3/4 lg:w-2/3 xl:w-1/2"
-                initial={{ opacity: 0, scale: 1 }}
+                className="relative bg-transparent rounded-lg overflow-hidden shadow-lg w-11/12 h-5/6 max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg"
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 170, damping: 30 }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Carrusel de imágenes con transición suave */}
                 <AnimatePresence initial={false} custom={direction}>
                   {selectedId !== null && (
                     <motion.div
-                      className="absolute inset-0"
                       key={selectedId}
-                      initial={{ x: direction > 0 ? "100%" : "-100%", zIndex: 1 }} // Entrada por un lado
-                      animate={{ x: 0, zIndex: 2 }} // En el centro
-                      exit={{ x: direction > 0 ? "-100%" : "100%", zIndex: 1 }} // Salida por el lado opuesto
+                      className="absolute inset-0"
+                      initial={{ x: direction > 0 ? "100%" : "-100%" }}
+                      animate={{ x: 0 }}
+                      exit={{ x: direction > 0 ? "-100%" : "100%" }}
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -131,10 +125,9 @@ const CardComponent = () => {
                       }}
                     >
                       <motion.img
-                        key={selectedItem.id}
                         src={selectedItem.imageUrl}
                         alt={selectedItem.title}
-                        className="w-full h-full object-cover mb-4 rounded-t-lg"
+                        className="w-full h-full object-cover"
                       />
                     </motion.div>
                   )}

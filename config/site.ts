@@ -20,6 +20,18 @@ export const siteConfig = {
       label: "Contacto",
       href: "/contacto",
     },
+    {
+      label:"Politica de Privacidad",
+      href:"/politica-de-privacidad"
+    },
+    {
+      label:"Politica de Cookies",
+      href:"/politica-de-cookies"
+    },
+    {
+      label:"Terminos de uso",
+      href:"/terminos-de-uso"
+    }
   ],
   navMenuItems: [
     {

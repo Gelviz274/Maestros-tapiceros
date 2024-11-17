@@ -36,11 +36,9 @@ const steps = [
 
 export function WorkProcess() {
     return (
-        <section className="py-24 px-44 bg-[#1A1A1A] relative overflow-hidden">
+        <section className="py-24 px-6 sm:px-12 md:px-16 lg:px-44 bg-[#1A1A1A] relative overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0 bg-beige rotate-12 transform scale-150" />
-            </div>
+                
 
             <div className="container mx-auto px-4 relative">
                 <div className="text-center max-w-2xl mx-auto mb-16">
@@ -50,13 +48,13 @@ export function WorkProcess() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {steps.map((step, index) => (
                         <div
                             key={index}
                             className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-500"
                         >
-                            <div className="flex items-start gap-6">
+                            <div className="flex flex-col sm:flex-row items-start gap-6">
                                 <div className="flex-shrink-0">
                                     <div className="w-12 h-12 bg-beige rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                                         {React.cloneElement(step.icon, {
@@ -64,7 +62,7 @@ export function WorkProcess() {
                                         })}
                                     </div>
                                 </div>
-                                <div>
+                                <div className="mt-4 sm:mt-0">
                                     <span className="text-beige text-sm font-medium mb-2 block">
                                         Paso {index + 1}
                                     </span>
