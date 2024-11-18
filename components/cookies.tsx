@@ -41,9 +41,9 @@ export default function CookieConsent() {
           animate={{ opacity: 1, y: 0 }} // Animación al mostrarse
           exit={{ opacity: 0, y: 50 }} // Animación al ocultarse
           transition={{ duration: 0.5, ease: "easeOut" }} // Duración y suavidad de la animación
-          className="fixed bottom-4 left-5 w-2/5 bg-black text-white p-4 flex gap-1 justify-around items-center rounded-2xl shadow-lg"
+          className="fixed bottom-4 left-5  w-3/5 md:w-2/5  bg-black  text-white p-4 flex flex-col  md:flex-row gap-1 justify-evenly items-center rounded-2xl shadow-lg "
         >
-          <div className="flex flex-col sm:flex-row items-center ml-5">
+          <div className="flex flex-col sm:flex-row items-center ml-2">
             <p className="text-sm sm:text-base">
               Usamos cookies para mejorar tu experiencia en nuestro sitio. Al
               continuar navegando, aceptas nuestra{" "}
@@ -66,3 +66,5 @@ export default function CookieConsent() {
     </AnimatePresence>
   );
 }
+
+
