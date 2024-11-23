@@ -147,16 +147,16 @@ export default function App() {
                 </DropdownItem>
 
                 <DropdownItem
-                  key="Cabeceros y basicamas"
-                  description="Diseñamos cabeceros y basicamas a medida, adaptados a cualquier estilo de decoración, desde elegantes capitoné hasta minimalistas, para un toque único en su dormitorio."
+                  key="Cabeceros y basecamas"
+                  description="Diseñamos cabeceros y basecamas a medida, adaptados a cualquier estilo de decoración, desde elegantes capitoné hasta minimalistas, para un toque único en su dormitorio."
                   startContent={<Bed />}
                   className=" hover:focus:bg-beige "
                   onClick={() => {
                     window.location.href = "/servicios#cabeceros";
                   }}
-                  textValue="Cabeceros y basicamas"
+                  textValue="Cabeceros y basecamas"
                 >
-                  <span className="font-bold">Cabeceros y basicamas</span>
+                  <span className="font-bold">Cabeceros y basecamas</span>
                 </DropdownItem>
 
                 <DropdownItem

@@ -38,10 +38,10 @@ const services = [
   {
     id: "cabeceros",
     icon: <Bed className="w-8 h-8" />,
-    title: "Cabeceros y Basicamas",
+    title: "Cabeceros y Basecamas",
     description: "Diseños personalizados a medida",
     longDescription:
-      "Creamos cabeceros y basicamas únicos que se adaptan perfectamente a su espacio y estilo. Trabajamos con una variedad de diseños, desde clásicos capitoné hasta modernos minimalistas. Cada pieza es fabricada a medida, garantizando un ajuste perfecto y acabado excepcional.",
+      "Creamos cabeceros y basecamas únicos que se adaptan perfectamente a su espacio y estilo. Trabajamos con una variedad de diseños, desde clásicos capitoné hasta modernos minimalistas. Cada pieza es fabricada a medida, garantizando un ajuste perfecto y acabado excepcional.",
     image: "/FOTOS/cabecero.jpeg",
   },
   {

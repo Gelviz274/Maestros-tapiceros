@@ -9,9 +9,10 @@ import "../styles/globals.css";
 import Parallax from "@/components/parallax";
 import CardComponent from "@/components/cards";
 import Servicesin from "@/components/serviciosin";
-import { ShieldIcon, ClockIcon, StarIcon } from "@/components/icons";
+import { ShieldIcon, ClockIcon, TruckIcon } from "@/components/icons";
 import Contact from "@/components/Contact";
 import Clients from "@/components/clients";
+
 
 type Seccion1 = {
   id: number;
@@ -35,10 +36,11 @@ const seccion1: Seccion1[] = [
   },
   {
     id: 3,
-    icon: StarIcon,
-    title: "Soluciones personalizadas",
-    text: "Servicios de tapicería adaptados a su estilo y requisitos únicos.",
-  },
+    icon: TruckIcon,
+    title: "Servicio a domicilio",
+    text: "Disfruta de nuestro exclusivo servicio a domicilio: llevamos la magia de la tapicería directamente a tu hogar u oficina. ",
+  }
+  
 ];
 
 function Homepage() {

@@ -27,7 +27,7 @@ const services: Props[] = [
   {
     id: 2,
     icon: BeedIcon,
-    tittle: "Cabeceros y basicamas",
+    tittle: "Cabeceros y basecamas",
     description: "Diseños personalizados para su dormitorio",
   },
   {
