@@ -114,7 +114,7 @@ function Homepage() {
                 transition={{ duration: 0.5 }}
                 key={seccion.id}
               >
-                <seccion.icon />
+                <seccion.icon className="text-cafe"/>
                 <h2 className="text-2xl font-bold text-cafe w-11/12">
                   {seccion.title}
                 </h2>

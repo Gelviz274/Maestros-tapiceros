@@ -5,7 +5,7 @@ export default function Politica() {
   return (
     <div className="w-screen-lg mx-auto px-44 py-8 bg-beigecard">
       <h1 className="text-4xl font-bold text-center mb-8">
-        Política de Privacidad
+        Política de Privacidad de Maestros Tapiceros
       </h1>
       <p className="text-lg mb-4">
         En Maestros Tapiceros nos comprometemos a proteger tu privacidad y a
