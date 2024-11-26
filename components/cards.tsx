@@ -8,14 +8,14 @@ type Item = {
 };
 
 const items: Item[] = [
-  { id: 1, title: "Sofá Moderno", imageUrl: "/FOTOS/Sofa-blanco-p.jpeg" },
+  { id: 1, title: "Sofá Moderno", imageUrl: "/FOTOS/Sofa-blanco-cliente.jpeg" },
   { id: 2, title: "Silla Vintage", imageUrl: "/FOTOS/Sofa-rojo-p.jpeg" },
   { id: 3, title: "Mueble Moderno", imageUrl: "/FOTOS/Sofa-mostaza-s.jpeg" },
-  { id: 4, title: "Sofá", imageUrl: "/FOTOS/Sofa-blanco-cliente.jpeg" },
-  { id: 5, title: "DASD", imageUrl: "/FOTOS/Sofa-gris-p.jpeg" },
-  { id: 6, title: "JKADA", imageUrl: "/FOTOS/Sofa-negro-p1.jpeg" },
+  { id: 4, title: "Sofá", imageUrl: "/FOTOS/Sofa-gris-s.jpeg" },
+  { id: 5, title: "Balcón", imageUrl: "/FOTOS/Balcon.jpg" },
+  { id: 6, title: "Foto pasillo", imageUrl: "/FOTOS/Pasillo.jpg" },
   { id: 7, title: "Sofás de cuero", imageUrl: "/FOTOS/Sofas-cuero.jpeg" },
-  { id: 8, title: "Sofá amarillo", imageUrl: "/FOTOS/Sofa-amarillo-p.jpeg" },
+  { id: 8, title: "Sofá amarillo", imageUrl: "/FOTOS/Puertas.jpg" },
   { id: 9, title: "Mueble corazones", imageUrl: "/FOTOS/Corazones.jpeg" },
   { id: 10, title: "Sillón con mesa", imageUrl: "/FOTOS/blanco.jpeg" },
   {

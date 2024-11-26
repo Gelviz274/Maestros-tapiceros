@@ -33,7 +33,7 @@ const services = [
     description: "Tapizado de puertas con acabados premium",
     longDescription:
       "Transformamos sus puertas con tapizados elegantes y duraderos. Ofrecemos una amplia gama de telas y materiales resistentes, ideales para diferentes estilos de decoración. Nuestro servicio incluye aislamiento acústico y térmico para mayor confort en su hogar u oficina.",
-    image: "/puertas.png",
+    image: "/FOTOS/Puertas.jpg",
   },
   {
     id: "cabeceros",
@@ -60,7 +60,7 @@ const services = [
     description: "Tapizado profesional para vehículos",
     longDescription:
       "Especialistas en tapizado de interiores para automóviles y aeronaves. Realizamos trabajos de restauración y personalización, utilizando materiales específicos para cada tipo de vehículo. Nuestro servicio incluye asientos, paneles de puertas, techos y detalles en cuero o tela.",
-    image: "/FOTOS/Camioneta.webp",
+    image: "/FOTOS/Avion.jpg",
   },
   {
     id: "proyectosEspeciales",

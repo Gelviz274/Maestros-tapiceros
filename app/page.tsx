@@ -1,5 +1,5 @@
 "use client";
-"use context";
+"useContext";
 import React from "react";
 import { motion } from "framer-motion";
 import { FunctionComponent, SVGProps } from "react";
@@ -128,7 +128,7 @@ function Homepage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cafe py-5 px-2 text-start">
                 Algo de nosotros
               </h2>
-              <p className="text-cafeclaro text-start sm:text-center text-xl sm:text-2xl py-3 px-2">
+              <p className="text-cafeclaro text-start sm:text-start text-xl sm:text-2xl py-3 px-2">
                 <strong>Maestros Tapiceros en Madrid</strong>, un oficio que
                 comenzó como parte de nuestra tradición familiar.
                 <strong>Con más de 25 años de experiencia</strong>, hemos

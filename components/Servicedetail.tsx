@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ServiceDetailProps {
@@ -23,9 +24,11 @@ export function ServiceDetail({
     >
       <div className="w-full lg:w-1/2">
         <div className="group relative aspect-[4/3] h-[600px] overflow-hidden rounded-2xl">
-          <img
+          <Image
             src={image}
             alt={title}
+            width={500}
+            height={500}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

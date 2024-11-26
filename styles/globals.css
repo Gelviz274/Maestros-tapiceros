@@ -12,7 +12,7 @@
 body {
   color: var(--cafe);
   background: var(--beige);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 html {
