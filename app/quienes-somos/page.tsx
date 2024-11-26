@@ -3,7 +3,7 @@
 import React from "react";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
-import AboutUs from "@/components/Aboutus";
+
 import Servicesin from "@/components/serviciosin";
 import QuienesCards from "@/components/quienes";
 function Quienessomos() {
