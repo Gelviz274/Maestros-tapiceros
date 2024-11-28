@@ -50,7 +50,7 @@ export default function QuienesCards() {
                             <Image
                             width={400}
                             height={400}
-                                src="/FOTOS/blanco.jpeg"
+                                src="/FOTOS/Sillon-azul-blanco.jpg"
                                 alt="Tapicería artesanal"
                                 className="rounded-lg hover:-translate-y-2 transition-transform duration-300 h-48 w-full object-cover"
                             />

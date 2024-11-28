@@ -24,7 +24,7 @@ function Quienessomos() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-6xl sm:text-7xl text-center grid place-items-center font-bold text-white gap-5 w-4/5"
+            className="text-5xl sm:text-7xl text-center grid place-items-center font-bold text-white gap-5 w-4/5"
           >
             Más de 25 Años Transformando Muebles en Obras de Arte
             <strong className="text-balance text-2xl font-normal mt-2 w-full">
