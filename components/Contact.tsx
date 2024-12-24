@@ -2,7 +2,6 @@
 import React, { useState } from "react"; // Importación de React
 import { handleForm } from "@/app/action"; // Importación local
 import { TelefonoIcon, ClockIcon, LocationBorder, MailBorder, UserIcon } from "@/components/icons"; // Componentes de iconos locales
-import GoogleMap from "@/components/mapsgoogle"; // Componente de mapa local
 import { motion } from "framer-motion"; // Librería externa
 import Link from "next/link"; // Librería externa
 
@@ -35,7 +34,7 @@ function Contact() {
       {showAlert && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white p-4 rounded-lg shadow-lg z-50">
           ¡Pronto nos contactaremos contigo!.
-        </div> 
+        </div>
       )}
 
       <motion.h2
@@ -94,19 +93,26 @@ function Contact() {
                 </Link>
               </div>
             </li>
-            <li className="flex items-center gap-3">
-              <LocationBorder className="w-6 h-6 text-cafe" />
-              <div>
-                <h2 className="text-lg font-bold text-cafe">Ubicación</h2>
-                <p className="text-zinc-600">
-                  Calle Canteras, local 8 28694 Madrid, MADRID
-                </p>
-              </div>
-            </li>
+            <li className="flex items-start gap-3">
+  <div className="flex-shrink-0">
+    <LocationBorder className="w-6 h-6 text-cafe" />
+  </div>
+  <div>
+    <h2 className="text-lg font-bold text-cafe">Ubicación</h2>
+    <p className="text-zinc-600">
+      En <strong className="text-cafe">Maestros Tapiceros</strong>, llevamos la tapicería hasta donde tú estés. 
+      Ofrecemos un servicio a domicilio para que no tengas que preocuparte por mover tus muebles o proyectos. 
+      Nuestro equipo se traslada a tu ubicación para realizar trabajos de alta calidad en la comodidad de tu hogar o negocio.
+      <br />
+      <br />
+      ¡Contáctanos y deja que la experiencia de nuestros maestros transforme tus espacios!
+    </p>
+  </div>
+</li>
+
+
           </ul>
-          <div className="w-full">
-            <GoogleMap />
-          </div>
+
         </div>
 
         {/* Formulario */}
