@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Usepage() {
   return (
-    <div className=" mx-auto px-44 py-8 bg-beigecard w-full ">
+    <div className=" mx-auto px-16 md:px-44 py-8 bg-beigecard w-full ">
       <h1 className="text-3xl font-bold text-center mb-6">
         Términos y Condiciones de Uso
       </h1>

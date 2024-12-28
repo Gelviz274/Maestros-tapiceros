@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const CookiePolicy = () => {
   return (
-    <div className="w-full mx-auto  py-8 bg-beigecard px-48">
+    <div className="w-full mx-auto py-8 bg-beigecard px-16 md:px-48">
       <h1 className="text-3xl font-bold text-center mb-4">
         Política de Cookies
       </h1>
@@ -43,9 +43,7 @@ const CookiePolicy = () => {
       </h2>
       <p className="text-lg mb-4">
         Puedes gestionar las cookies a través de la configuración de tu
-        navegador. Sin embargo, si decides bloquear todas las cookies, es
-        posible que algunas funcionalidades de nuestro sitio no estén
-        disponibles.
+        navegador. 
       </p>
 
       <h2 className="text-2xl font-semibold mb-2">

@@ -45,11 +45,12 @@ const seccion1: Seccion1[] = [
 
 function Homepage() {
   return (
-    <article
-      className="h-full -mt-16 bg-no-repeat"
-      style={{ backgroundImage: 'url("fondo.jpg")'}}
-      rel="preload"
-    >
+      <article
+        className="h-full -mt-16 bg-no-repeat"
+        style={{ backgroundImage: 'url("fondo.jpg")'}}
+        rel="preload"
+        
+      >
       {/* PANTALLA PRINCIPAL */}
       <Parallax>
         <section className="h-screen bg-transparent grid place-items-center bg-cover bg-center px-5 sm:px-10 md:px-16 lg:px-24">

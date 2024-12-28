@@ -69,7 +69,7 @@ const services = [
     description: "Soluciones personalizadas únicas",
     longDescription:
       "Desarrollamos proyectos especiales y únicos según sus necesidades específicas. Desde instalaciones artísticas hasta mobiliario comercial personalizado, nuestro equipo está preparado para enfrentar cualquier desafío creativo. Trabajamos en estrecha colaboración con diseñadores y arquitectos.",
-    image: "/imagen 2.webp",
+    image: "/FOTOS/Salaplantas.jpg",
   },
 ];
 

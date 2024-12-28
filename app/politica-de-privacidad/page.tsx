@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Politica() {
   return (
-    <div className="w-screen-lg mx-auto px-44 py-8 bg-beigecard">
+    <div className="w-screen-lg mx-auto px-16 md:px-44 py-8 bg-beigecard">
       <h1 className="text-4xl font-bold text-center mb-8">
         Política de Privacidad de Maestros Tapiceros
       </h1>

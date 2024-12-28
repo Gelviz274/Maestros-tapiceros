@@ -98,8 +98,17 @@ export default function App() {
                 Inicio
               </Link>
             </NavbarItem>
+            <NavbarItem>
+              <Link
+                className="font-bold text-cafe hover:text-cafe_hover text-large"
+                href="/servicios"
+              >
+                Servicios
+              </Link>
+            </NavbarItem>
+            
 
-            <Dropdown className="!bg-white">
+             {/*<Dropdown className="!bg-white">
               <NavbarItem>
                 <DropdownTrigger>
                   <Button
@@ -125,7 +134,7 @@ export default function App() {
                   description="Ofrecemos restauración y tapizados de todo tipo, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
                   startContent={<Armchair className="h-7 w-7" />}
                   className=" hover:focus:bg-beige "
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#muebles";
                   }}
                   textValue="Muebles"
@@ -139,7 +148,7 @@ export default function App() {
                   startContent={<DoorOpen />}
                   className="hover:focus:bg-beige"
                   textValue="Puertas"
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#puertas";
                   }}
                 >
@@ -151,7 +160,7 @@ export default function App() {
                   description="Diseñamos cabeceros y basecamas a medida, adaptados a cualquier estilo de decoración, desde elegantes capitoné hasta minimalistas, para un toque único en su dormitorio."
                   startContent={<Bed />}
                   className=" hover:focus:bg-beige "
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#cabeceros";
                   }}
                   textValue="Cabeceros y basecamas"
@@ -164,7 +173,7 @@ export default function App() {
                   description="Proporcionamos soluciones de tapicería para embarcaciones y exteriores, con materiales resistentes al agua y rayos UV, perfectos para ambientes marinos y exteriores."
                   startContent={<Ship />}
                   className=" hover:focus:bg-beige "
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#nauticas";
                   }}
                   textValue="Barcos"
@@ -177,7 +186,7 @@ export default function App() {
                   description="Ofrecemos tapizado personalizado para automóviles con materiales resistentes y de alta calidad. Renovamos asientos, puertas y detalles interiores, adaptándolos al estilo y necesidades del cliente."
                   startContent={<Car />}
                   className=" hover:focus:bg-beige "
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#tapizadoAutomotriz";
                   }}
                   textValue="Sillas de coches"
@@ -190,7 +199,7 @@ export default function App() {
                   description="Realizamos proyectos personalizados para necesidades únicas, colaborando en la creación de mobiliario especial, instalaciones artísticas y otras soluciones innovadoras."
                   startContent={<Lightbulb />}
                   className=" hover:focus:bg-beige "
-                  onClick={() => {
+                  onPress={() => {
                     window.location.href = "/servicios#proyectosEspeciales";
                   }}
                   textValue="Proyectos Especiales"
@@ -198,7 +207,8 @@ export default function App() {
                   <span className="font-bold">Proyectos especiales</span>
                 </DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown>  
+            */}
 
             <NavbarItem>
               <Link
@@ -258,7 +268,7 @@ export default function App() {
           border-b-2 border-cafeclaro hover:border-cafehover
         "
                 href={item.href}
-                onClick={() => {
+                onPress={() => {
                   setTimeout(() => {
                     setIsMenuOpen(false); // Cierra el menú después de 2 segundos
                   }, 1000);

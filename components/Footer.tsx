@@ -3,7 +3,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import {
-  Location,
   TelephoneIcon,
   Mail,
   Instagram,
@@ -20,20 +19,7 @@ export default function Footer() {
           alt="Logo Maestros Tapiceros"
           className="w-32 h-32 sm:w-40 sm:h-40"
         />
-
-        {/* Dirección */}
-        <div className="flex items-center text-center space-x-2">
-          <Location className="w-5 h-5" />
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-sm sm:text-base"
-          >
-            Calle Canteras, local 8, 28694 Madrid, MADRID
-          </motion.h1>
-        </div>
-
+        <h4 className="text-cafe font-bold">Nuestros medios de comunicación</h4>
         {/* Contacto */}
         <div className="flex flex-col sm:flex-row sm:justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
           <motion.h1
