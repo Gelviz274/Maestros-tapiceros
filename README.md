@@ -7,7 +7,7 @@
 
 ## Características
 
-- **Páginas**: Inicio, Servicios, Sobre Nosotros y Contacto.
+- **Páginas**: Inicio, Servicios, Sobre Nosotros, Contacto, Politica de cookies, Politica de privacidad y Terminos de uso.
 - **Servicios**: Tapicería de muebles, puertas, cabeceros y basicamas, sofás y sillas, náuticas y toldos, tapizado automotriz, y proyectos especiales.
 - **Formulario de contacto**: Recopila datos de los clientes y permite aceptación de términos y verificación de "No soy un robot".
 - **Diseño optimizado para SEO**: Mejora la visibilidad en motores de búsqueda.
@@ -22,45 +22,13 @@
 - **Framer Motion**: Animaciones fluidas y atractivas.
 - **Git**: Control de versiones y colaboración.
 
-## Instalación y Configuración
-
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/usuario/maestros-tapiceros.git
-   cd maestros-tapiceros
-   ```
-
-2. **Instalar dependencias**:
-   Asegúrate de tener Node.js instalado, luego ejecuta:
-   ```bash
-   npm install
-   ```
-
-3. **Configurar variables de entorno**:
-   Crea un archivo `.env.local` y añade las siguientes variables:
-   ```env
-   NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY=tu_clave_publica
-   NEXT_PUBLIC_API_URL=tu_url_de_la_api
-   ```
-
-4. **Ejecutar en desarrollo**:
-   ```bash
-   npm run dev
-   ```
-   Accede al sitio en [http://localhost:3000](http://localhost:3000).
-
-5. **Construcción para producción**:
-   ```bash
-   npm run build
-   npm start
-   ```
 
 ## Estructura del Proyecto
 
 ```
 /app
   /components   # Componentes reutilizables
-  /services     # Lógica de negocio
+  /lib     # Lógica de negocio como Brevo
   /styles       # Estilos globales
   /pages        # Páginas principales
   /public       # Recursos estáticos (imágenes, logos, etc.)
@@ -68,13 +36,13 @@
 
 ## Equipo
 
-- **Líder del proyecto**: Nombre del usuario
-- **Colaboradores**: Amiga del usuario
+- **Líder del proyecto**: Juan David Gelviz 
+- **Colaboradores**: Tatiana Castaño Morales
 - **Empresa**: Maestros Tapiceros
 
 ## Contacto
 
-Si tienes preguntas o necesitas soporte, puedes contactarnos a través del [formulario de contacto](https://maestrostapiceros.com/contacto).
+Si tienes preguntas o necesitas soporte, puedes contactarnos a través del [formulario de contacto](https://maestros-tapiceros.vercel.app/contacto).
 
 ---
 
