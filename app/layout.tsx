@@ -115,7 +115,33 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Maestros Tapiceros",
+              "url": "https://www.maestrostapicerosmadrid.es", 
+              "logo": "https://www.maestrostapicerosmadrid.es/Logo-HD.jpeg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+34-641388422",
+                "contactType": "Customer Service",
+                "areaServed": "ES", 
+                "availableLanguage": "Spanish",
+              },
+              "sameAs": [
+                "https://www.facebook.com/maestrostapiceros",
+                "https://www.instagram.com/maestrostapiceros"
+              ],
+              "description": siteConfig.description,
+            }),
+          }}
+        />
+
+      </head>
       <body
         className={clsx(
           "max-screen bg-white montserrat antialiased",
