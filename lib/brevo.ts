@@ -24,7 +24,7 @@ export async function sendEmail({ name, email, phone, message }: Params) {
 
     // Quién recibe el email
     smtpEmail.to = [
-      { email: "jgelvizjaimes13@gmail.com", name: "Juan David Gelviz" },
+      { email: "maestrostapicerosmadrid@gmail.com", name: "Maestros Tapiceros" },
     ];
 
     smtpEmail.htmlContent = `
