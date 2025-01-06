@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /privada
+Allow: /
+Sitemap: https://www.maestrostapicerosmadrid.es/sitemap.xml
