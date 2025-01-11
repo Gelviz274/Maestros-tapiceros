@@ -1,15 +1,14 @@
 "use client";
 "useContext";
 import React from "react";
+import Head from "./head";
 import {
   Armchair,
   Car,
   Ship,
   Bed,
   DoorOpen,
-  Sofa,
   Lightbulb,
-  ArrowRight,
 } from "lucide-react";
 import { WorkProcess } from "@/components/proceso";
 import { ServiceDetail } from "@/components/Servicedetail";
@@ -75,6 +74,8 @@ const services = [
 
 function Servicios() {
   return (
+    <>
+    <Head />
     <div className="h-full">
       <div
         className="flex flex-col min-h-screen -mt-20"
@@ -158,6 +159,7 @@ function Servicios() {
       <WorkProcess />
       <Contact />
     </div>
+    </>
   );
 }
 
