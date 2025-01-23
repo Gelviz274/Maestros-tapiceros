@@ -4,44 +4,54 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://maestrostapicerosmadrid.es/</loc>
   <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
+
 <url>
   <loc>https://maestrostapicerosmadrid.es/servicios</loc>
   <lastmod>2025-01-06T05:09:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
 </url>
+
 <url>
   <loc>https://maestrostapicerosmadrid.es/quienes-somos</loc>
   <lastmod>2025-01-06T05:09:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://maestrostapicerosmadrid.es/contacto</loc>
-  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://maestrostapicerosmadrid.es/politica-de-privacidad</loc>
-  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://maestrostapicerosmadrid.es/terminos-de-uso</loc>
-  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://maestrostapicerosmadrid.es/politica-de-cookies</loc>
-  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 
+<url>
+  <loc>https://maestrostapicerosmadrid.es/contacto</loc>
+  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+
+<url>
+  <loc>https://maestrostapicerosmadrid.es/politica-de-privacidad</loc>
+  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+
+<url>
+  <loc>https://maestrostapicerosmadrid.es/terminos-de-uso</loc>
+  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
+
+<url>
+  <loc>https://maestrostapicerosmadrid.es/politica-de-cookies</loc>
+  <lastmod>2025-01-06T05:09:07+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.50</priority>
+</url>
 
 </urlset>
