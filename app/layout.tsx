@@ -66,6 +66,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <meta name="google-site-verification" content="AX7-K-qm33Ft3KfO0sttRcXhs9SqGNC0lGNvlXqcMFQ" />
       </head>
       <body
         className={clsx(
@@ -85,6 +86,7 @@ export default function RootLayout({
             `,
           }}
         />
+        
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex h-screen flex-col">
             <Header />
