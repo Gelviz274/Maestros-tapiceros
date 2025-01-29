@@ -7,6 +7,10 @@ export default function Head() {
           name="description"
           content=" Descubre nuestros servicios de tapicería en Madrid. Restauramos muebles, puertas, cabeceros, tapizados náuticos, automotrices y más con calidad excepcional."
         />
+        <meta
+        name="keywords"
+        content="servicios de tapicería, restauración muebles, tapizado puertas, tapicería náutica, tapicería automotriz, tapicería de cabeceros"
+      />
         <link rel="icon" href="/favicon.ico" />
       </>
     );

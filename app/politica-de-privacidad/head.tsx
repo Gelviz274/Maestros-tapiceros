@@ -7,6 +7,10 @@ export default function Head() {
           name="description"
           content="Descubre cómo protegemos y manejamos tus datos personales en Maestros Tapiceros, en cumplimiento con la normativa de privacidad vigente."
         />
+        <meta
+        name="keywords"
+        content="política de privacidad, protección de datos, Maestros Tapiceros Madrid, privacidad usuario, manejo de datos"
+      />
         <link rel="icon" href="/favicon.ico" />
       </>
     );
