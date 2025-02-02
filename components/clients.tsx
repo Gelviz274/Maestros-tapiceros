@@ -10,22 +10,22 @@ const LogoCloud = () => {
     },
     {
       name: "Gobierno de España",
-      imageUrl: "/LOGOS/spain.png",
+      imageUrl: "/LOGOS/spain.webp",
       description: "Administración Pública",
     },
     {
       name: "Marco Aldany",
-      imageUrl: "/LOGOS/marcoaldany.png",
+      imageUrl: "/LOGOS/marcoaldany.webp",
       description: "Salón de Belleza",
     },
     {
       name: "Rubaiyat",
-      imageUrl: "/LOGOS/Bubaiyat-madrid.jpg",
+      imageUrl: "/LOGOS/Bubaiyat-madrid.webp",
       description: "Restaurante",
     },
     {
       name: "Urrechu Velázquez",
-      imageUrl: "/LOGOS/Urrechu-Velazquez.jpeg",
+      imageUrl: "/LOGOS/Urrechu-Velazquez.webp",
       description: "Restaurante",
     },
   ];

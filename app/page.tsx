@@ -47,7 +47,7 @@ function Homepage() {
   return (
       <article
         className="h-full -mt-16 bg-no-repeat"
-        style={{ backgroundImage: 'url("fondo.jpeg")'}}
+        style={{ backgroundImage: 'url("fondo.webp")'}}
         rel="preload"
         
       >

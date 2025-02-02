@@ -80,7 +80,7 @@ function Servicios() {
       <div
         className="flex flex-col min-h-screen -mt-20"
         style={{
-          backgroundImage: 'url("sofablanco.jpg")',
+          backgroundImage: 'url("sofablanco.webp")',
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
