@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="es">
       <head>
         <script
           type="application/ld+json"
@@ -53,7 +53,7 @@ export default function RootLayout({
               "logo": "https://www.maestrostapicerosmadrid.es/Logo-HD.jpeg",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+34-641388422",
+                "telephone": "+34-640 128 457",
                 "contactType": "Customer Service",
                 "areaServed": "ES",
                 "availableLanguage": "Spanish",
@@ -67,6 +67,8 @@ export default function RootLayout({
           }}
         />
         <meta name="google-site-verification" content="AX7-K-qm33Ft3KfO0sttRcXhs9SqGNC0lGNvlXqcMFQ" />
+        <link rel="canonical" href="https://www.maestrostapicerosmadrid.es/" />
+
       </head>
       <body
         className={clsx(
@@ -90,7 +92,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex h-screen flex-col">
             <Header />
-            <main className="container mx-auto max-w-full flex-grow bg-w">
+            <main className="container mx-auto max-w-full flex-grow">
               {children}
             </main>
             <CookieConsent />

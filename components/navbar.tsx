@@ -20,7 +20,6 @@ import {
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import React from "react";
-import { Armchair, Car, Ship, Bed, DoorOpen, Lightbulb } from "lucide-react";
 import { ChevronDown, TelephoneIcon, Mail } from "@/components/icons";
 
 export default function App() {
@@ -42,11 +41,11 @@ export default function App() {
           <h3 className="flex items-center text-center sm:text-left text-sm sm:text-base">
             Llámanos al:
             <Link
-              href="tel:641388422"
+              href="tel:640128457"
               className="hover:text-cafehover text-cafe ml-1 flex items-center"
-              aria-label="Teléfono de contacto: 641 388 422"
+              aria-label="Teléfono de contacto: 640 128 457"
             >
-              641 388 422
+              640 128 457
               <TelephoneIcon className="ml-1 w-4 h-4" />
             </Link>
           </h3>
@@ -106,110 +105,6 @@ export default function App() {
                 Servicios
               </Link>
             </NavbarItem>
-            
-
-             {/*<Dropdown className="!bg-white">
-              <NavbarItem>
-                <DropdownTrigger>
-                  <Button
-                    disableRipple
-                    className="p-0 bg-transparent data-[hover=true]:bg-transparent font-bold text-cafe hover:text-cafe_hover text-large"
-                    endContent={<ChevronDown />}
-                    radius="sm"
-                    variant="light"
-                  >
-                    Servicios
-                  </Button>
-                </DropdownTrigger>
-              </NavbarItem>
-              <DropdownMenu
-                aria-label="Dropdown Menu"
-                className="w-[340px] bg-white p-0"
-                itemClasses={{
-                  base: "gap-4",
-                }}
-              >
-                <DropdownItem
-                  key="Muebles"
-                  description="Ofrecemos restauración y tapizados de todo tipo, desde piezas clásicas hasta contemporáneas, utilizando materiales de alta calidad para recuperar su belleza y funcionalidad original."
-                  startContent={<Armchair className="h-7 w-7" />}
-                  className=" hover:focus:bg-beige "
-                  onPress={() => {
-                    window.location.href = "/servicios#muebles";
-                  }}
-                  textValue="Muebles"
-                >
-                  <span className="font-bold">Muebles, sofás y sillas</span>
-                </DropdownItem>
-
-                <DropdownItem
-                  key="Tapizado de puertas"
-                  description="Transformamos puertas con tapizados elegantes y personalizados, brindando un acabado de lujo y, opcionalmente, aislamiento acústico y térmico para mayor confort y estilo."
-                  startContent={<DoorOpen />}
-                  className="hover:focus:bg-beige"
-                  textValue="Puertas"
-                  onPress={() => {
-                    window.location.href = "/servicios#puertas";
-                  }}
-                >
-                  <span className="font-bold">Puertas</span>
-                </DropdownItem>
-
-                <DropdownItem
-                  key="Cabeceros y basecamas"
-                  description="Diseñamos cabeceros y basecamas a medida, adaptados a cualquier estilo de decoración, desde elegantes capitoné hasta minimalistas, para un toque único en su dormitorio."
-                  startContent={<Bed />}
-                  className=" hover:focus:bg-beige "
-                  onPress={() => {
-                    window.location.href = "/servicios#cabeceros";
-                  }}
-                  textValue="Cabeceros y basecamas"
-                >
-                  <span className="font-bold">Cabeceros y basecamas</span>
-                </DropdownItem>
-
-                <DropdownItem
-                  key="Barcos"
-                  description="Proporcionamos soluciones de tapicería para embarcaciones y exteriores, con materiales resistentes al agua y rayos UV, perfectos para ambientes marinos y exteriores."
-                  startContent={<Ship />}
-                  className=" hover:focus:bg-beige "
-                  onPress={() => {
-                    window.location.href = "/servicios#nauticas";
-                  }}
-                  textValue="Barcos"
-                >
-                  <span className="font-bold">Náuticas y toldos</span>
-                </DropdownItem>
-
-                <DropdownItem
-                  key="Sillas de coches"
-                  description="Ofrecemos tapizado personalizado para automóviles con materiales resistentes y de alta calidad. Renovamos asientos, puertas y detalles interiores, adaptándolos al estilo y necesidades del cliente."
-                  startContent={<Car />}
-                  className=" hover:focus:bg-beige "
-                  onPress={() => {
-                    window.location.href = "/servicios#tapizadoAutomotriz";
-                  }}
-                  textValue="Sillas de coches"
-                >
-                  <span className="font-bold">Sillas de coches</span>
-                </DropdownItem>
-
-                <DropdownItem
-                  key="Proyectos"
-                  description="Realizamos proyectos personalizados para necesidades únicas, colaborando en la creación de mobiliario especial, instalaciones artísticas y otras soluciones innovadoras."
-                  startContent={<Lightbulb />}
-                  className=" hover:focus:bg-beige "
-                  onPress={() => {
-                    window.location.href = "/servicios#proyectosEspeciales";
-                  }}
-                  textValue="Proyectos Especiales"
-                >
-                  <span className="font-bold">Proyectos especiales</span>
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>  
-            */}
-
             <NavbarItem>
               <Link
                 className="font-bold text-cafe text-lg"

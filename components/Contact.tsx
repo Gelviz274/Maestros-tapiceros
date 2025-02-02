@@ -65,9 +65,9 @@ function Contact() {
                 <h2 className="text-lg font-bold text-cafe">Teléfono</h2>
                 <Link
                   className="hover:text-cafe text-zinc-600"
-                  href="tel:641388422"
+                  href="tel:640128457"
                 >
-                  641 388 422
+                  640 128 457
                 </Link>
               </div>
             </li>

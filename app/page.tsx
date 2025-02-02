@@ -54,7 +54,7 @@ function Homepage() {
       {/* PANTALLA PRINCIPAL */}
       <Parallax>
         <section className="h-screen bg-transparent grid place-items-center bg-cover bg-center px-5 sm:px-10 md:px-16 lg:px-24">
-          <motion.h2
+          <motion.h1
             animate={{ opacity: 1 }}
             className="text-5xl md:text-5xl lg:text-7xl text-center grid place-items-center font-bold text-white gap-5 w-4/5"
             initial={{ opacity: 0 }}
@@ -78,7 +78,7 @@ function Homepage() {
             >
               Contáctanos
             </motion.button>
-          </motion.h2>
+          </motion.h1>
         </section>
 
         {/* SECCION 1 - CONTENT 1 */}
