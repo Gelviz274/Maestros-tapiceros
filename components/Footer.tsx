@@ -30,10 +30,10 @@ export default function Footer() {
           >
             <TelephoneIcon className="w-4 h-4 mr-1" />
             <Link
-              href="tel:641388422"
+              href="tel:640128457"
               className="hover:text-cafehover text-black"
             >
-              641 388 422
+              640 128 457
             </Link>
           </motion.h1>
 

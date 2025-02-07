@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   keywords: [
+    "tapiceria en madrid",
+    "tapiceria",
     "tapicería profesional",
     "tapicería a domicilio",
     "tapiceros expertos",
